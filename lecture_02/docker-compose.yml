@@ -1,0 +1,11 @@
+version: '2.3'
+
+services:
+  startdocker:
+    build: .
+    ports:
+    - 30000:80
+    volumes:
+    - ./html:/var/www/html/
+    - ./img:/var/www/html/img/
+    restart: always
