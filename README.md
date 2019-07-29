@@ -10,9 +10,11 @@ New project for training "Frontend-development"
 
 ## lecture_02
 
-1. docker-compose build
-2. docker-compose up -d
-3. open http://localhost:30000
+1. git clone https://github.com/haanastasia/EPM-FE2019.git
+2. go to folder 'lecture_02'
+3. docker-compose build
+4. docker-compose up -d
+5. open http://localhost:30000
 
 ### Authors 
 
