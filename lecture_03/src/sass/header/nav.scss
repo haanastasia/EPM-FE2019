@@ -1,0 +1,24 @@
+.nav {
+
+    &__list {
+        list-style: none;	
+        @include flex(row, wrap, space-between, flex-start, flex-start);
+        width: 422px;
+    }
+
+    &__link {
+        text-transform: uppercase;
+        font-family: Montserrat;
+        font-size: 10.5px;
+        font-weight: bold;
+        line-height: 0.67;
+        letter-spacing: normal;
+        text-align: left;
+        color: #ffffff;
+        text-decoration: none;
+
+        &--active {
+            color: $primary-color;
+        }
+    }
+}

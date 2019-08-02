@@ -1,0 +1,34 @@
+{
+  "name": "Molecular",
+  "version": "1.0.0",
+  "description": "Docker + webpack",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/haanastasia/molecular/"
+  },
+  "author": "haanastasia <haanastasia@yandex.com>",
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3"
+  },
+  "devDependencies": {
+    "css-loader": "^0.28.11",
+    "exports-loader": "^0.7.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.8.2",
+    "rimraf": "^2.6.1",
+    "sass-loader": "^6.0.7",
+    "script-loader": "^0.7.2",
+    "style-loader": "^0.21.0",
+    "webpack": "^3.12.0",
+    "webpack-dev-server": "^2.7.1"
+  },
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack --watch"
+  }
+}

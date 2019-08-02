@@ -1,0 +1,22 @@
+.header {
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    padding: 41px 0px;
+
+    &__logo {
+        font-family: Montserrat;
+        font-size: 29.5px;
+        font-weight: bold;
+        line-height: 0.8;
+        letter-spacing: -2.95px;
+        text-align: left;
+        text-transform: uppercase; 
+        color: #ffffff;
+    }
+
+    .content {
+        @include flex(row, wrap, space-between, flex-end, space-between);
+    }
+}

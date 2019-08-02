@@ -1,0 +1,26 @@
+.slider {
+    height: 692.6px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+    &__item {
+        height: 100%;
+        @include flex(row, wrap, flex-start, center, center);
+    }
+ 
+    &__title {
+        font-family: $font-stack;
+        font-size: 40.5px;
+        font-weight: bold;
+        max-width: 472px; 
+        color: #ffffff;
+    }
+
+    &__text { 
+        font-size: 19px;
+        font-weight: 100;
+        max-width: 417px; 
+        color: #ffffff;
+    }
+}
