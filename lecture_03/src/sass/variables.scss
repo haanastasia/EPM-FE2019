@@ -1,9 +1,11 @@
 $primary-color:        #ffe26d;
 $primary-color-active: #62497c;
+$main-color-family:    #040405;
+$second-color:         #efefef;
 $font-stack:             Montserrat;
 
 @mixin flex($direction, $wrap, $content, $items, $align-content) {
-    display: flex;
+    display: flex; 
 	flex-direction: $direction;
 	flex-wrap: $wrap;
 	justify-content: $content;
@@ -11,4 +13,10 @@ $font-stack:             Montserrat;
 	align-content: $align-content;
 }
 
- 
+%animation {
+	-webkit-transition: all 300ms ease-in-out;
+	-moz-transition: all 300ms ease-in-out;
+	-ms-transition: all 300ms ease-in-out;
+	-o-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
+}

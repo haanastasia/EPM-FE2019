@@ -1,0 +1,10 @@
+.form {
+
+    &__label {
+        font-size: 10.5px;
+        font-weight: bold;
+        font-family: $font-stack;  
+        line-height: 0.67;
+        color: #323232;
+    }
+}

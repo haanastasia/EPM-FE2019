@@ -1,0 +1,15 @@
+.subscription {
+    background-image: url(../../assets/newsletter.png);    
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 57px 0px 144px;
+
+    &__caption {
+        color: #ffffff;
+    }
+
+    &__form {
+        width: 546px;
+        margin: 0 auto;
+    }
+}

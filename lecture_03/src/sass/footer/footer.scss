@@ -1,3 +1,23 @@
 .footer {
- 
+    padding: 78px 0px 129px;
+
+    &__col {
+        @include flex(row, wrap, space-between, stretch, stretch);
+    }
+
+    &__title {
+        font-family: $font-stack;
+        font-size: 10.5px;
+        font-weight: bold;
+        color: $main-color-family;
+        text-transform: uppercase;    
+        margin-bottom: 24px;
+    }
+
+    &__text {
+        font-family: Helvetica;
+        font-size: 13.5px;
+        line-height: 1.74;
+        color: $main-color-family;
+    }
 }

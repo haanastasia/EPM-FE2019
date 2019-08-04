@@ -1,0 +1,52 @@
+.pricing {
+    padding: 86px 0px 87px;
+
+    &__list {
+        width: 100%;
+        margin-top: 48px;
+    }
+
+    &-list {
+
+        td {
+            border-left: 2px solid rgba(0, 0, 0, 0.2);
+
+            &:first-child {
+                border-left: 0px;
+            }
+        }
+
+        &__title {
+            font-family: $font-stack;
+            font-size: 14.5px;
+            font-weight: bold;
+            line-height: 0.8;
+            color: $main-color-family;
+            padding-bottom: 19px;
+        }
+
+        &__cost {
+            font-family: $font-stack;
+            font-size: 14.5px;
+            line-height: 0.8;
+            color: rgba(4, 4, 5, 0.39);
+        }
+
+        &__info {
+            font-family: Helvetica;
+            font-size: 10.5px;
+            line-height: 2.1;
+            color: $main-color-family;
+            padding: 20px 0px 26px;
+        }
+
+        &__btn {
+            background-color: $primary-color;
+
+            &:hover {
+                background-color: $primary-color-active;
+                color: #ffffff;
+            }
+        }
+    }
+}

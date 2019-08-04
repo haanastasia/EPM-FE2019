@@ -1,0 +1,30 @@
+.form-contact {
+
+
+    &__control {
+        box-shadow: 0.5px 0.9px 1px 0 rgba(22,22,23,.09);
+        border-radius: 0;
+        height: 44px;
+        width: 291px;
+        padding: 0px 10px;
+        margin: 12px 0px 21px;
+    }
+
+    &__area {
+        height: 125px;
+        padding: 10px;    
+        margin-bottom: 15px;
+    }
+
+    &__btn {
+        width: 100%;
+        padding: 17px 0px 18px;
+        color: #fefefe;
+        background-color: $primary-color-active;
+
+        &:hover {
+            background-color: $second-color;
+            color: $main-color-family;
+        }
+    }
+}

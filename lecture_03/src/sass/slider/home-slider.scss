@@ -1,4 +1,4 @@
-.slider {
+.home-slider {
     height: 692.6px;
     background-position: center;
     background-size: contain;
@@ -23,4 +23,13 @@
         max-width: 417px; 
         color: #ffffff;
     }
+
+    &__btn {
+        background-color: $primary-color;
+
+        &:hover {
+            background-color: $primary-color-active;
+            color: #ffffff;
+        }
+    } 
 }

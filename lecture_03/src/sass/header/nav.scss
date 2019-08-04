@@ -20,5 +20,10 @@
         &--active {
             color: $primary-color;
         }
+
+        &:hover {
+            color: $primary-color;    
+            text-decoration: underline;
+        }
     }
 }

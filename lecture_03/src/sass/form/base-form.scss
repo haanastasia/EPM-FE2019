@@ -1,0 +1,33 @@
+.form {
+
+    &__control {
+        background-color: #fefefe;
+        border: 0px;            
+        font-family: $font-stack;
+        font-size: 19px;
+        line-height: 1;
+
+        &::-webkit-input-placeholder { 
+            color: #d8d8d8;
+        }
+
+        &::-moz-placeholder {  
+            color: #d8d8d8;
+        }
+
+        &:-ms-input-placeholder { 
+            color: #d8d8d8;
+        }
+
+        &:-moz-placeholder { 
+            color: #d8d8d8;
+        }
+    }
+    
+    &__col {
+        margin-top: 34px;
+    }
+}
+
+ 
+ 

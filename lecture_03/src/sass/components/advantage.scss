@@ -1,0 +1,43 @@
+.advantage {
+    @include flex(row, wrap, space-between, stretch, stretch);
+
+    &__item {
+        width: 160px;
+    }
+
+    &__icon {
+        background-color: $primary-color-active;
+        width: 81px;
+        height: 81px;
+        border-radius: 50%;    
+        margin: 0 auto;
+    }
+
+    &__title {
+        font-family: $font-stack;
+        font-size: 14.5px;
+        font-weight: bold;
+        line-height: 0.8;    
+        margin: 33px 0px 27px;
+        color: $primary-color-active;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        font-family: Helvetica;
+        font-size: 13.5px;
+        line-height: 1.74;
+        color: rgba(4, 4, 5, 0.5);
+        margin-bottom: 34px;
+    }
+
+    &__btn {
+        background-color: $primary-color;
+        color: #323232;
+
+        &:hover {
+            background-color: $primary-color-active;
+            color: #ffffff;  
+        }
+    }
+}
