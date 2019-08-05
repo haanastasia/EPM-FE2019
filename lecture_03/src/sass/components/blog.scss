@@ -1,8 +1,8 @@
 .blog {
-    padding-top: 72px; 
+    padding-top: 71px; 
 
     &__col {
-        margin: 53px 0px 88px;
+        margin: 58px 0px 88px;
 
         &:after {
             content: ".";
@@ -19,7 +19,8 @@
         margin-right: 36px;
 
         &:nth-child(3) {
-            margin-right: 0px;
+            margin-right: 0px;    
+            margin-left: 2px;
         }
     }
     
@@ -29,7 +30,7 @@
         font-weight: bold;
         color: $main-color-family;    
         width: 169px;
-        margin: 36px auto 24px;
+        margin: 29px auto 16px;
         text-transform: uppercase;
     }
 
@@ -53,7 +54,7 @@
         font-size: 13.5px;
         line-height: 1.74;
         color: $main-color-family;    
-        margin: 25px 0px 29px;
+        margin: 15px 0 29px;
     }
 
     &__btn {

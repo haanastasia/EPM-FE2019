@@ -2,16 +2,17 @@
     @include flex(row, wrap, space-between, stretch, stretch);
     
     &__map {
-        width: 50%;
+        width: 693px;
     }
 
     &__info {
-        width: calc(50% - 86.8px);
-        padding: 51px 43.4px 52px;
+        width: 610px;
+        padding: 47px 48.4px 52px;
         background-color: $primary-color;
     }
 
     &__form {
-        width: 311px;
+        width: 311px;    
+        margin-left: -5px;
     }
 }

@@ -3,8 +3,15 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=1400" />
     <title>Zippy</title>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery.pixlayout.0.9.7.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $.pixlayout({ clip: true, src: "zippy.png", show: true, center: true, top: 0, left: 0, pervious: false });
+        }); 
+    </script>
 </head>
 
 <body>
@@ -62,7 +69,7 @@
                 <h2 class="title center">Welcome to Zippy</h2>
                 <div class="main-content__col">
                     <div class="main-content__text">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel
-                        velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor.</div>
+                        velit auctor aliquet. Aenean sol-<br>licitudin, lorem quis bibendum auctor.</div>
 
                     <div class="main-content__icon">
                         <img src="img/umbrella.png">
@@ -116,8 +123,8 @@
                     <div class="projects__info">
                         <div class="projects__name">project name</div>
                         <div class="projects__text">Lorem ipsum dolor sit amet, consectetur adipi&shy;scing elit.
-                            Pellentesque vel odio vel felis placerat pharetra ut vitae felis. </div>
-                        <div class="projects__btn btn btn--middle">launch case study</div>
+                            Pellentesque vel odio vel felis plac&shy;erat pharetra ut vitae felis. </div>
+                        <div class="projects__btn btn btn--middle btn--size-middle">launch case study</div>
                     </div>
                 </div>
                 <div class="projects__item">
@@ -125,33 +132,33 @@
                     <div class="projects__info">
                         <div class="projects__name">project name</div>
                         <div class="projects__text">Lorem ipsum dolor sit amet, consectetur adipi&shy;scing elit.
-                            Pellentesque vel odio vel felis placerat pharetra ut vitae felis. </div>
-                        <div class="projects__btn btn btn--middle">launch case study</div>
+                            Pellentesque vel odio vel felis plac&shy;erat pharetra ut vitae felis. </div>
+                        <div class="projects__btn btn btn--middle btn--size-middle">launch case study</div>
                     </div>
                 </div>
                 <div class="projects__item">
                     <img src="img/project3.png" class="projects__preview">
                     <div class="projects__info">
                         <div class="projects__name">project name</div>
-                        <div class="projects__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Pellentesque vel odio vel felis placerat pharetra ut vitae felis. </div>
-                        <div class="projects__btn btn btn--middle">launch case study</div>
+                        <div class="projects__text">Lorem ipsum dolor sit amet, consectetur adipi&shy;scing elit.
+                            Pellentesque vel odio vel felis plac&shy;erat pharetra ut vitae felis. </div>
+                        <div class="projects__btn btn btn--middle btn--size-middle">launch case study</div>
                     </div>
                 </div>
                 <div class="projects__item">
                     <img src="img/project4.png" class="projects__preview">
                     <div class="projects__info">
                         <div class="projects__name">project name</div>
-                        <div class="projects__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Pellentesque vel odio vel felis placerat pharetra ut vitae felis. </div>
-                        <div class="projects__btn btn btn--middle">launch case study</div>
+                        <div class="projects__text">Lorem ipsum dolor sit amet, consectetur adipi&shy;scing elit.
+                            Pellentesque vel odio vel felis plac&shy;erat pharetra ut vitae felis. </div>
+                        <div class="projects__btn btn btn--middle btn--size-middle">launch case study</div>
                     </div>
                 </div>
             </div>
         </section>
         <section class="pricing">
             <div class="content">
-                <h2 class="title center">Pricing Table</h2>
+                <h2 class="title center title--price">Pricing Table</h2>
                 <table class="pricing__list pricing-list center" cellpadding="0" cellspacing="0">
                     <tr>
                         <td class="pricing-list__title">STANDARD PLAN</td>
@@ -193,7 +200,7 @@
             </div>
         </section>
         <section class="video section section--primary">
-            <h2 class="title center title--invert">Video Projects</h2>
+            <h2 class="title center title--invert title--video">Video Projects</h2>
             <div class="video__slider slider video-slider">
                 <div class="video-slider__item">
                     <div class="video-slider__preview">
@@ -226,11 +233,22 @@
         </section>
         <section class="team">
             <div class="content">
-                <h2 class="title center">Zippy Team</h2>
+                <h2 class="title center title--team">Zippy Team</h2>
                 <div class="team__col center">
                     <div class="team__item">
                         <div class="team__preview">
                             <img src="img/team1.png" class="team__image">
+                            <div class="team__social left">
+                                <a href="#" class="team__social-link team__social-link--facebook">
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" class="team__social-link team__social-link--twitter">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" class="team__social-link team__social-link--google">
+                                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                                </a>
+                            </div>
                         </div>
                         <div class="team__name">
                             Sara Johnson
@@ -242,6 +260,17 @@
                     <div class="team__item center">
                         <div class="team__preview">
                             <img src="img/team2.png" class="team__image">
+                            <div class="team__social left">
+                                <a href="#" class="team__social-link team__social-link--facebook">
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" class="team__social-link team__social-link--twitter">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" class="team__social-link team__social-link--google">
+                                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                                </a>
+                            </div>
                         </div>
                         <div class="team__name">
                             Matt Alex
@@ -253,6 +282,17 @@
                     <div class="team__item center">
                         <div class="team__preview">
                             <img src="img/team3.png" class="team__image">
+                            <div class="team__social left">
+                                <a href="#" class="team__social-link team__social-link--facebook">
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" class="team__social-link team__social-link--twitter">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" class="team__social-link team__social-link--google">
+                                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                                </a>
+                            </div>
                         </div>
                         <div class="team__name">
                             CHris Philips
@@ -266,6 +306,17 @@
                     <div class="team__item">
                         <div class="team__preview">
                             <img src="img/team4.png" class="team__image">
+                            <div class="team__social left">
+                                <a href="#" class="team__social-link team__social-link--facebook">
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" class="team__social-link team__social-link--twitter">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" class="team__social-link team__social-link--google">
+                                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                                </a>
+                            </div>
                         </div>
                         <div class="team__name">
                             Jimmy Smith
@@ -277,6 +328,17 @@
                     <div class="team__item center">
                         <div class="team__preview">
                             <img src="img/team5.png" class="team__image">
+                            <div class="team__social left">
+                                <a href="#" class="team__social-link team__social-link--facebook">
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" class="team__social-link team__social-link--twitter">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" class="team__social-link team__social-link--google">
+                                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                                </a>
+                            </div>
                         </div>
                         <div class="team__name">
                             Aliza
@@ -288,6 +350,17 @@
                     <div class="team__item center">
                         <div class="team__preview">
                             <img src="img/team6.png" class="team__image">
+                            <div class="team__social left">
+                                <a href="#" class="team__social-link team__social-link--facebook">
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" class="team__social-link team__social-link--twitter">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" class="team__social-link team__social-link--google">
+                                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                                </a>
+                            </div>
                         </div>
                         <div class="team__name">
                             Celien john
@@ -301,7 +374,7 @@
         </section>
         <section class="life section section--second">
             <div class="content">
-                <h2 class="title center">Life in Zippy</h2>
+                <h2 class="title center title--life">Life in Zippy</h2>
                 <div class="gallery gallery-life">
                     <div class="gallery__main-photo">
                         <img src="img/gallery1.png">
@@ -325,7 +398,7 @@
             </div>
         </section>
         <section class="subscription">
-            <h2 class="title center title--invert">Newsletter Signup</h2>
+            <h2 class="title center title--invert title--subscription">Newsletter Signup</h2>
             <form class="subscription__form form form-subscription">
                 <input class="form-subscription__control form__control" placeholder="abc@example.com">
                 <input class="form-subscription__btn btn btn--square" type="submit" value="sign up">
@@ -333,7 +406,7 @@
         </section>
         <section class="blog">
             <div class="content">
-                <h2 class="title center">Blog</h2>
+                <h2 class="title center title--blog">Blog</h2>
                 <div class="blog__col">
                     <div class="blog__item center">
                         <img src="img/blog1.png" class="blog__preview">
@@ -342,7 +415,8 @@
                             sit amet
                         </div>
                         <div class="blog__date">15 Jan, 2015</div>
-                        <div class="blog__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+                        <div class="blog__text">Lorem ipsum dolor sit amet, con&shy;sectetur adipiscing elit.
+                            Pellen&shy;tesque
                             vel odio vel felis placerat pharetra ut vitae felis. </div>
                         <div class="btn btn--middle blog__btn">READ MORE</div>
                     </div>
@@ -353,7 +427,8 @@
                             sit amet
                         </div>
                         <div class="blog__date">15 Jan, 2015</div>
-                        <div class="blog__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+                        <div class="blog__text">Lorem ipsum dolor sit amet, con&shy;sectetur adipiscing elit.
+                            Pellen&shy;tesque
                             vel odio vel felis placerat pharetra ut vitae felis. </div>
                         <div class="btn btn--middle blog__btn">READ MORE</div>
                     </div>
@@ -364,7 +439,8 @@
                             sit amet
                         </div>
                         <div class="blog__date">15 Jan, 2015</div>
-                        <div class="blog__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+                        <div class="blog__text">Lorem ipsum dolor sit amet, con&shy;sectetur adipiscing elit.
+                            Pellen&shy;tesque
                             vel odio vel felis placerat pharetra ut vitae felis. </div>
                         <div class="btn btn--middle blog__btn">READ MORE</div>
                     </div>
@@ -377,7 +453,7 @@
                     src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad9c47dc2c651d0cc8a22e4f7424391d3d44a30d7d90e9e730e48d2f485a7af00&amp;width=100%25&amp;height=653&amp;lang=ru_RU&amp;scroll=false"></script>
             </div>
             <div class="contact__info">
-                <h2 class="title">Contact</h2>
+                <h2 class="title title--contact">Contact</h2>
                 <form class="form contact__form form-contact" name="contact_form" method="post">
                     <div class="form__col">
                         <div class="form__line">
@@ -418,26 +494,26 @@
                 </div>
                 <div class="footer__item">
                     <div class="footer__title">Follow us</div>
-                    <div class="footer__social social">
+                    <div class="footer__social social left">
                         <div class="social__col">
-                            <a href="#" class="social__link">
+                            <a href="#" class="social__link social__link--behance">
                                 <i class="fa fa-behance social__icon" aria-hidden="true"></i>
                             </a>
-                            <a href="#" class="social__link">
+                            <a href="#" class="social__link social__link--twitter">
                                 <i class="fa fa-twitter social__icon" aria-hidden="true"></i>
                             </a>
-                            <a href="#" class="social__link">
+                            <a href="#" class="social__link social__link--linkedin">
                                 <i class="fa fa-linkedin social__icon" aria-hidden="true"></i>
                             </a>
                         </div>
                         <div class="social__col">
-                            <a href="#" class="social__link">
+                            <a href="#" class="social__link social__link--facebook">
                                 <i class="fa fa-facebook social__icon" aria-hidden="true"></i>
                             </a>
-                            <a href="#" class="social__link">
+                            <a href="#" class="social__link social__link--google">
                                 <i class="fa fa-google-plus social__icon" aria-hidden="true"></i>
                             </a>
-                            <a href="#" class="social__link">
+                            <a href="#" class="social__link social__link--tumblr">
                                 <i class="fa fa-tumblr social__icon" aria-hidden="true"></i>
                             </a></div>
                     </div>

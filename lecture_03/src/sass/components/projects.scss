@@ -3,7 +3,7 @@
 
     &__col {
         @include flex(row, nowrap, flex-start, stretch, stretch);
-        margin-top: 47px;
+        margin-top: 52px;
     }
 
     &__item {
@@ -30,7 +30,7 @@
     }
 
     &__info {
-        padding: 46.6px 35px 47px 44px;
+        padding: 43.6px 31px 45px 43px;
     }
 
     &__name {
@@ -38,7 +38,7 @@
         font-size: 14.5px;
         font-weight: bold;
         line-height: 0.8;
-        margin-bottom: 17px;
+        margin-bottom: 13px;
         color: $main-color-family;
         text-transform: uppercase;
     }
@@ -48,7 +48,8 @@
         font-size: 13.5px;
         line-height: 1.74;
         color: rgba(4, 4, 5, 0.5);
-        margin-bottom: 15px;
+        margin-bottom: 14px;    
+        letter-spacing: -0.1px;
     }
 
     &__preview {
@@ -57,6 +58,6 @@
     }
 
     &__btn {
-        background-color: #ffffff;
+        background-color: #ffffff;    
     }
 }

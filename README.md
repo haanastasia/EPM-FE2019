@@ -7,6 +7,7 @@ New project for training "Frontend-development"
 ## Tasks
 
 + [lecture_02](#lecture_02)
++ [lecture_03](#lecture_03)
 
 ## lecture_02
 
@@ -15,6 +16,15 @@ New project for training "Frontend-development"
 3. docker-compose build
 4. docker-compose up -d
 5. open http://localhost:30000
+
+## lecture_03
+
+1. git clone https://github.com/haanastasia/EPM-FE2019.git
+2. go to folder 'lecture_03'
+3. run node.js
+4. npm install
+5. npm run build
+6. npm run start
 
 ### Authors 
 

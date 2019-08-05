@@ -1,12 +1,12 @@
 .team {
-    padding: 76px 0px 136px;
+    padding: 76px 0px 143px;
 
     &__col {
         @include flex(row, wrap, space-between, stretch, stretch);
-        padding-top: 64.1px;
+        padding-top: 52.1px;
 
-        &:first-child {
-            padding-top: 44.3px;
+        &:last-child {
+            padding-top: 67.1px;
         }
     }
 
@@ -22,6 +22,10 @@
             .team__image {
                 opacity: 0.3;
             }
+
+            .team__social { 
+                opacity: 1;
+            }
         }
     }
 
@@ -32,8 +36,8 @@
         line-height: 0.48;
         color: $main-color-family;
         text-transform: uppercase;
-        margin-top: 31.2px;
-        margin-bottom: 16px;
+        margin-top: 33.2px;
+        margin-bottom: 24px;
     }
 
     &__job {
@@ -71,5 +75,30 @@
     &__image {
         max-width: 100%;
         @extend %animation;
+    }
+
+    &__social {
+        position: absolute;
+        top: 62px;
+        width: 100%;
+        @extend %animation;
+        opacity: 0;
+    }
+
+    &__social-link {
+        color: white;
+        font-size: 33px;
+        text-decoration: none;
+
+        &--twitter {
+            font-size: 41px;
+            margin-left: 15px;    
+            margin-right: 4px;
+        }
+
+        &--facebook {
+            margin-left: 19px;
+            margin-right: 2px;
+        }
     }
 }

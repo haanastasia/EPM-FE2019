@@ -3,7 +3,7 @@
 
     &__list {
         width: 100%;
-        margin-top: 48px;
+        margin-top: 54px;
     }
 
     &-list {
@@ -13,6 +13,16 @@
 
             &:first-child {
                 border-left: 0px;
+                width: 214px;
+                padding-right: 11px;
+            }
+
+            &:nth-child(2) {
+                width: 237px;
+            }
+
+            &:nth-child(3) {
+                padding-left: 3px;
             }
         }
 
@@ -22,12 +32,13 @@
             font-weight: bold;
             line-height: 0.8;
             color: $main-color-family;
-            padding-bottom: 19px;
+            padding-bottom: 23px;
         }
 
         &__cost {
             font-family: $font-stack;
-            font-size: 14.5px;
+            letter-spacing: 1.1px;
+            font-size: 13.9px;
             line-height: 0.8;
             color: rgba(4, 4, 5, 0.39);
         }
@@ -35,9 +46,9 @@
         &__info {
             font-family: Helvetica;
             font-size: 10.5px;
-            line-height: 2.1;
+            line-height: 1.91;
             color: $main-color-family;
-            padding: 20px 0px 26px;
+            padding: 15px 0 20px;
         }
 
         &__btn {

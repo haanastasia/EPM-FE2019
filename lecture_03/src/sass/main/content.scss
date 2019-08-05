@@ -26,14 +26,56 @@ body {
     text-align: right;
 }
 
+.left {
+    text-align: left;
+}
+
 .title {
     font-family: $font-stack;
-    font-size: 44px;
+    font-size: 43px;
     font-weight: bold;
     line-height: 0.92;
-    color: $main-color-family;
+    color: $main-color-family;    
+    letter-spacing: 0.1px;
+    margin-left: -10px;
 
     &--invert {
         color: #ffffff;
+    }
+
+    &--price {
+        font-size: 42.8px;
+        letter-spacing: -0.4px;
+        margin-top: 3px;
+    }
+
+    &--video {
+        font-size: 43.3px;
+        letter-spacing: -0.1px;    
+        margin-left: 0px;
+    }
+
+    &--team {
+        font-size: 42px;
+        letter-spacing: .8px;
+        margin-left: 2px;
+    }
+
+    &--life {
+        margin-left: -5px;
+    }
+
+    &--subscription {
+        font-size: 41px;
+        letter-spacing: 1.2px;
+        margin-left: -1px;
+    }
+
+    &--blog {
+        margin-left: -4px;
+    }
+
+    &--contact {
+        margin-left: -7px;
     }
 }

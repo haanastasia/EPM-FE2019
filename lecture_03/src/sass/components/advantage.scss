@@ -3,6 +3,14 @@
 
     &__item {
         width: 160px;
+
+        &:nth-child(1) {
+            margin-left: -2px;
+        }
+
+        &:nth-child(2) {
+            margin-left: -2px;
+        }
     }
 
     &__icon {
@@ -19,7 +27,7 @@
         font-size: 14.5px;
         font-weight: bold;
         line-height: 0.8;    
-        margin: 33px 0px 27px;
+        margin: 33px 0 21px;
         color: $primary-color-active;
         text-transform: uppercase;
     }
@@ -27,9 +35,10 @@
     &__text {
         font-family: Helvetica;
         font-size: 13.5px;
-        line-height: 1.74;
+        line-height: 1.78;
+        letter-spacing: -0.1px;
         color: rgba(4, 4, 5, 0.5);
-        margin-bottom: 34px;
+        margin-bottom: 29px;
     }
 
     &__btn {

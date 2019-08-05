@@ -7,11 +7,12 @@
 
     &__title {
         font-family: $font-stack;
-        font-size: 10.5px;
         font-weight: bold;
         color: $main-color-family;
         text-transform: uppercase;    
-        margin-bottom: 24px;
+        font-size: 10px;
+        margin-bottom: 16px;
+        letter-spacing: -0.2px;
     }
 
     &__text {
@@ -22,6 +23,20 @@
     }
 
     &__social {
-        width: 108px;
+        width: 113px;
+        margin: 0 auto;    
+        padding-top: 8px;
+    }
+
+    &__item {
+        min-width: 205px;
+
+        &:last-child {
+            min-width: 218px;
+        }
+
+        &:nth-child(2) {
+            margin-left: 13px;
+        }
     }
 }
