@@ -1,17 +1,10 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=1400" />
     <title>Zippy</title>
-    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
-    <script type="text/javascript" src="js/jquery.pixlayout.0.9.7.js"></script>
-    <script type="text/javascript">
-        $(function () {
-            $.pixlayout({ clip: true, src: "zippy.png", show: true, center: true, top: 0, left: 0, pervious: false });
-        }); 
-    </script>
 </head>
 
 <body>
@@ -47,7 +40,7 @@
             <div class="home__slider slider home-slider" style="background-image: url(img/slide1.jpg);">
                 <div class="home-slider__item">
                     <div class="content">
-                        <div class="home-slider__title">One page promising to fill all your needs!</div>
+                        <h3 class="home-slider__title">One page promising to fill all your needs!</h3>
                         <p class="home-slider__text">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel
                             velit
                             auctor aliquet.</p>
@@ -66,13 +59,13 @@
         </section>
         <section>
             <div class="content main-content">
-                <h2 class="title center">Welcome to Zippy</h2>
+                <h1 class="title center">Welcome to Zippy</h1>
                 <div class="main-content__col">
                     <div class="main-content__text">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel
                         velit auctor aliquet. Aenean sol-<br>licitudin, lorem quis bibendum auctor.</div>
 
                     <div class="main-content__icon">
-                        <img src="img/umbrella.png">
+                        <img src="img/umbrella.png" alt="Welcome to Zippy">
                     </div>
                 </div>
                 <div class="advantage main-content__advantage center">
@@ -119,7 +112,7 @@
             <h2 class="title center">Projects</h2>
             <div class="projects__col">
                 <div class="projects__item">
-                    <img src="img/project1.png" class="projects__preview">
+                    <img src="img/project1.png" class="projects__preview" alt="Projects">
                     <div class="projects__info">
                         <div class="projects__name">project name</div>
                         <div class="projects__text">Lorem ipsum dolor sit amet, consectetur adipi&shy;scing elit.
@@ -128,7 +121,7 @@
                     </div>
                 </div>
                 <div class="projects__item">
-                    <img src="img/project2.png" class="projects__preview">
+                    <img src="img/project2.png" class="projects__preview" alt="Projects">
                     <div class="projects__info">
                         <div class="projects__name">project name</div>
                         <div class="projects__text">Lorem ipsum dolor sit amet, consectetur adipi&shy;scing elit.
@@ -137,7 +130,7 @@
                     </div>
                 </div>
                 <div class="projects__item">
-                    <img src="img/project3.png" class="projects__preview">
+                    <img src="img/project3.png" class="projects__preview" alt="Projects">
                     <div class="projects__info">
                         <div class="projects__name">project name</div>
                         <div class="projects__text">Lorem ipsum dolor sit amet, consectetur adipi&shy;scing elit.
@@ -146,7 +139,7 @@
                     </div>
                 </div>
                 <div class="projects__item">
-                    <img src="img/project4.png" class="projects__preview">
+                    <img src="img/project4.png" class="projects__preview" alt="Projects">
                     <div class="projects__info">
                         <div class="projects__name">project name</div>
                         <div class="projects__text">Lorem ipsum dolor sit amet, consectetur adipi&shy;scing elit.
@@ -159,7 +152,7 @@
         <section class="pricing">
             <div class="content">
                 <h2 class="title center title--price">Pricing Table</h2>
-                <table class="pricing__list pricing-list center" cellpadding="0" cellspacing="0">
+                <table class="pricing__list pricing-list center">
                     <tr>
                         <td class="pricing-list__title">STANDARD PLAN</td>
                         <td class="pricing-list__title">BUSINESS PLAN</td>
@@ -204,7 +197,7 @@
             <div class="video__slider slider video-slider">
                 <div class="video-slider__item">
                     <div class="video-slider__preview">
-                        <img src="img/video2.png" class="video-slider__image">
+                        <img src="img/video2.png" class="video-slider__image" alt="Video Projects">
                     </div>
                     <div class="video-slider__info">
                         <div class="video-slider__title">Video title</div>
@@ -213,7 +206,7 @@
                 </div>
                 <div class="video-slider__item">
                     <div class="video-slider__preview">
-                        <img src="img/video1.png" class="video-slider__image">
+                        <img src="img/video1.png" class="video-slider__image" alt="Video Projects">
                     </div>
                     <div class="video-slider__info">
                         <div class="video-slider__title">Video title</div>
@@ -222,7 +215,7 @@
                 </div>
                 <div class="video-slider__item">
                     <div class="video-slider__preview">
-                        <img src="img/video3.png" class="video-slider__image">
+                        <img src="img/video3.png" class="video-slider__image" alt="Video Projects">
                     </div>
                     <div class="video-slider__info">
                         <div class="video-slider__title">Video title</div>
@@ -237,7 +230,7 @@
                 <div class="team__col center">
                     <div class="team__item">
                         <div class="team__preview">
-                            <img src="img/team1.png" class="team__image">
+                            <img src="img/team1.png" class="team__image" alt="Zippy Team">
                             <div class="team__social left">
                                 <a href="#" class="team__social-link team__social-link--facebook">
                                     <i class="fa fa-facebook" aria-hidden="true"></i>
@@ -259,7 +252,7 @@
                     </div>
                     <div class="team__item center">
                         <div class="team__preview">
-                            <img src="img/team2.png" class="team__image">
+                            <img src="img/team2.png" class="team__image" alt="Zippy Team">
                             <div class="team__social left">
                                 <a href="#" class="team__social-link team__social-link--facebook">
                                     <i class="fa fa-facebook" aria-hidden="true"></i>
@@ -281,7 +274,7 @@
                     </div>
                     <div class="team__item center">
                         <div class="team__preview">
-                            <img src="img/team3.png" class="team__image">
+                            <img src="img/team3.png" class="team__image" alt="Zippy Team">
                             <div class="team__social left">
                                 <a href="#" class="team__social-link team__social-link--facebook">
                                     <i class="fa fa-facebook" aria-hidden="true"></i>
@@ -305,7 +298,7 @@
                 <div class="team__col center">
                     <div class="team__item">
                         <div class="team__preview">
-                            <img src="img/team4.png" class="team__image">
+                            <img src="img/team4.png" class="team__image" alt="Zippy Team">
                             <div class="team__social left">
                                 <a href="#" class="team__social-link team__social-link--facebook">
                                     <i class="fa fa-facebook" aria-hidden="true"></i>
@@ -327,7 +320,7 @@
                     </div>
                     <div class="team__item center">
                         <div class="team__preview">
-                            <img src="img/team5.png" class="team__image">
+                            <img src="img/team5.png" class="team__image" alt="Zippy Team">
                             <div class="team__social left">
                                 <a href="#" class="team__social-link team__social-link--facebook">
                                     <i class="fa fa-facebook" aria-hidden="true"></i>
@@ -349,7 +342,7 @@
                     </div>
                     <div class="team__item center">
                         <div class="team__preview">
-                            <img src="img/team6.png" class="team__image">
+                            <img src="img/team6.png" class="team__image" alt="Zippy Team">
                             <div class="team__social left">
                                 <a href="#" class="team__social-link team__social-link--facebook">
                                     <i class="fa fa-facebook" aria-hidden="true"></i>
@@ -377,18 +370,18 @@
                 <h2 class="title center title--life">Life in Zippy</h2>
                 <div class="gallery gallery-life">
                     <div class="gallery__main-photo">
-                        <img src="img/gallery1.png">
+                        <img src="img/gallery1.png" alt="Life in Zippy">
                     </div>
                     <div class="gallery__dotted">
                         <div class="gallery__prev gallery__arrow">
                             <i class="fa fa-chevron-left gallery__icon" aria-hidden="true"></i>
                         </div>
                         <div class="gallery__thumbnails">
-                            <img src="img/gallery2.png">
-                            <img src="img/gallery3.png">
-                            <img src="img/gallery4.png">
-                            <img src="img/gallery5.png">
-                            <img src="img/gallery6.png">
+                            <img src="img/gallery2.png" alt="Life in Zippy">
+                            <img src="img/gallery3.png" alt="Life in Zippy">
+                            <img src="img/gallery4.png" alt="Life in Zippy">
+                            <img src="img/gallery5.png" alt="Life in Zippy">
+                            <img src="img/gallery6.png" alt="Life in Zippy">
                         </div>
                         <div class="gallery__next gallery__arrow">
                             <i class="fa fa-chevron-right gallery__icon" aria-hidden="true"></i>
@@ -409,7 +402,7 @@
                 <h2 class="title center title--blog">Blog</h2>
                 <div class="blog__col">
                     <div class="blog__item center">
-                        <img src="img/blog1.png" class="blog__preview">
+                        <img src="img/blog1.png" class="blog__preview" alt="Blog">
                         <div class="blog__title">
                             LOREM IPSUM dolor
                             sit amet
@@ -421,7 +414,7 @@
                         <div class="btn btn--middle blog__btn">READ MORE</div>
                     </div>
                     <div class="blog__item center">
-                        <img src="img/blog2.png" class="blog__preview">
+                        <img src="img/blog2.png" class="blog__preview" alt="Blog">
                         <div class="blog__title">
                             LOREM IPSUM dolor
                             sit amet
@@ -433,7 +426,7 @@
                         <div class="btn btn--middle blog__btn">READ MORE</div>
                     </div>
                     <div class="blog__item center">
-                        <img src="img/blog3.png" class="blog__preview">
+                        <img src="img/blog3.png" class="blog__preview" alt="Blog">
                         <div class="blog__title">
                             LOREM IPSUM dolor
                             sit amet
@@ -449,7 +442,7 @@
         </section>
         <section class="contact">
             <div class="contact__map">
-                <script type="text/javascript" charset="utf-8" async
+                <script async
                     src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad9c47dc2c651d0cc8a22e4f7424391d3d44a30d7d90e9e730e48d2f485a7af00&amp;width=100%25&amp;height=653&amp;lang=ru_RU&amp;scroll=false"></script>
             </div>
             <div class="contact__info">
