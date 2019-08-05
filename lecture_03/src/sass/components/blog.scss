@@ -2,12 +2,25 @@
     padding-top: 72px; 
 
     &__col {
-        @include flex(row, wrap, space-between, stretch, stretch);    
         margin: 53px 0px 88px;
+
+        &:after {
+            content: ".";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
     }
     
     &__item {
-        width: 206px;
+        width: 206px;    
+        float: left;
+        margin-right: 36px;
+
+        &:nth-child(3) {
+            margin-right: 0px;
+        }
     }
     
     &__title {

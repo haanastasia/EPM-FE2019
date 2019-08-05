@@ -8,9 +8,14 @@
         margin-right: 7px;
         opacity: 0.5;
         background-color: #ffffff;
+        cursor: pointer;
 
         &--active {
             opacity: 1;
+        }
+
+        &:hover {
+            opacity: 0.8;
         }
     }
 
