@@ -15,11 +15,24 @@
         letter-spacing: -0.2px;
     }
 
-    &__text {
-        font-family: Helvetica;
-        font-size: 13.5px;
-        line-height: 1.74;
-        color: $main-color-family;
+    &__list {
+        list-style: none;
+
+        &--col {
+            @include flex(row, wrap, space-around, flex-start, stretch);
+        }
+ 
+        &--row {
+            @include flex(column, nowrap, flex-start, stretch, stretch);
+        }
+
+        li, a {
+            font-family: Helvetica;
+            font-size: 13.5px;
+            line-height: 1.74;
+            color: $main-color-family;
+            text-decoration: none;
+        }
     }
 
     &__social {

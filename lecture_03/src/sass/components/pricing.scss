@@ -46,11 +46,15 @@
         }
 
         &__info {
-            font-family: Helvetica;
-            font-size: 10.5px;
-            line-height: 1.91;
-            color: $main-color-family;
             padding: 15px 0 20px;
+            list-style: none;
+            
+            li {
+                font-family: Helvetica;
+                font-size: 10.5px;
+                line-height: 1.91;
+                color: $main-color-family;
+            }
         }
 
         &__btn {

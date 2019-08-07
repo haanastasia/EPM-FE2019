@@ -164,19 +164,30 @@
                         <td class="pricing-list__cost">14$/MONTH</td>
                     </tr>
                     <tr>
-                        <td class="pricing-list__info">2 GB Available<br>
-                            15 max. contacts<br>
-                            30 Messages/month<br>
-                            Disgusting Ads
+                        <td>
+                            <ul class="pricing-list__info">
+                                <li>2 GB Available</li>
+                                <li>15 max. contacts</li>
+                                <li>30 Messages/month</li>
+                                <li>Disgusting Ads</li>
+                            </ul>
                         </td>
-                        <td class="pricing-list__info">10 GB Available<br>
-                            75 max. contacts<br>
-                            120 Messages/month<br>
-                            Ads Free</td>
-                        <td class="pricing-list__info">100 GB Available<br>
-                            Unlimited Contacts<br>
-                            Unlimited Messages/month<br>
-                            Ads Free</td>
+                        <td>
+                            <ul class="pricing-list__info">
+                                <li>10 GB Available</li>
+                                <li>75 max. contacts</li>
+                                <li>120 Messages/month</li>
+                                <li>Ads Free</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul class="pricing-list__info">
+                                <li>100 GB Available</li>
+                                <li>Unlimited Contacts</li>
+                                <li>Unlimited Messages/month</li>
+                                <li>Ads Free</li>
+                            </ul>
+                        </td>
                     </tr>
                     <tr>
                         <td>
@@ -392,7 +403,7 @@
         </section>
         <section class="subscription">
             <h2 class="title center title--invert title--subscription">Newsletter Signup</h2>
-            <form class="subscription__form form form-subscription">
+            <form class="subscription__form form form-subscription" name="subscription_form" method="post">
                 <input class="form-subscription__control form__control" placeholder="abc@example.com">
                 <button class="form-subscription__btn btn btn--square" type="submit">sign up</button>
             </form>
@@ -408,9 +419,9 @@
                             sit amet
                         </div>
                         <div class="blog__date">15 Jan, 2015</div>
-                        <div class="blog__text">Lorem ipsum dolor sit amet, con&shy;sectetur adipiscing elit.
+                        <p class="blog__text">Lorem ipsum dolor sit amet, con&shy;sectetur adipiscing elit.
                             Pellen&shy;tesque
-                            vel odio vel felis placerat pharetra ut vitae felis. </div>
+                            vel odio vel felis placerat pharetra ut vitae felis. </p>
                         <button class="btn btn--middle blog__btn">READ MORE</button>
                     </div>
                     <div class="blog__item center">
@@ -420,9 +431,9 @@
                             sit amet
                         </div>
                         <div class="blog__date">15 Jan, 2015</div>
-                        <div class="blog__text">Lorem ipsum dolor sit amet, con&shy;sectetur adipiscing elit.
+                        <p class="blog__text">Lorem ipsum dolor sit amet, con&shy;sectetur adipiscing elit.
                             Pellen&shy;tesque
-                            vel odio vel felis placerat pharetra ut vitae felis. </div>
+                            vel odio vel felis placerat pharetra ut vitae felis. </p>
                         <button class="btn btn--middle blog__btn">READ MORE</button>
                     </div>
                     <div class="blog__item center">
@@ -432,9 +443,9 @@
                             sit amet
                         </div>
                         <div class="blog__date">15 Jan, 2015</div>
-                        <div class="blog__text">Lorem ipsum dolor sit amet, con&shy;sectetur adipiscing elit.
+                        <p class="blog__text">Lorem ipsum dolor sit amet, con&shy;sectetur adipiscing elit.
                             Pellen&shy;tesque
-                            vel odio vel felis placerat pharetra ut vitae felis. </div>
+                            vel odio vel felis placerat pharetra ut vitae felis. </p>
                         <button class="btn btn--middle blog__btn">READ MORE</button>
                     </div>
                 </div>
@@ -450,22 +461,23 @@
                 <form class="form contact__form form-contact" name="contact_form" method="post">
                     <div class="form__col">
                         <div class="form__line">
-                            <div class="form__label">Name</div>
-                            <input type="text" name="contact_name" class="form-contact__control form__control" required>
+                            <label class="form__label" for="contact_name">Name</label>
+                            <input type="text" name="contact_name" id="contact_name"
+                                class="form-contact__control form__control" required>
                         </div>
                         <div class="form__line">
-                            <div class="form__label">Email address</div>
-                            <input type="email" name="contact_mail" class="form-contact__control form__control"
-                                required>
+                            <label class="form__label" for="contact_mail">Email address</label>
+                            <input type="email" name="contact_mail" id="contact_mail"
+                                class="form-contact__control form__control" required>
                         </div>
                         <div class="form__line">
-                            <div class="form__label">Subject</div>
-                            <input type="text" name="contact_subject" class="form-contact__control form__control"
-                                required>
+                            <label class="form__label" for="contact_subject">Subject</label>
+                            <input type="text" name="contact_subject" id="contact_subject"
+                                class="form-contact__control form__control" required>
                         </div>
                         <div class="form__line">
-                            <div class="form__label">Message</div>
-                            <textarea
+                            <label class="form__label" for="contact_msg">Message</label>
+                            <textarea id="contact_msg"
                                 class="form-contact__control form-contact__area form__control form__area"></textarea>
                         </div>
                         <div class="form__line">
@@ -481,41 +493,58 @@
             <div class="footer__col center">
                 <div class="footer__item">
                     <div class="footer__title">Office Address</div>
-                    <div class="footer__text">Lorem Ipsum dolor, 234<br>
-                        1200 Consecture<br>
-                        Adipsching</div>
+                    <ul class="footer__list footer__list--row">
+                        <li>Lorem Ipsum dolor, 234</li>
+                        <li>1200 Consecture</li>
+                        <li>Adipsching</li>
+                    </ul>
                 </div>
                 <div class="footer__item">
                     <div class="footer__title">Follow us</div>
                     <div class="footer__social social left">
-                        <div class="social__col">
-                            <a href="#" class="social__link social__link--behance">
-                                <i class="fa fa-behance social__icon" aria-hidden="true"></i>
-                            </a>
-                            <a href="#" class="social__link social__link--twitter">
-                                <i class="fa fa-twitter social__icon" aria-hidden="true"></i>
-                            </a>
-                            <a href="#" class="social__link social__link--linkedin">
-                                <i class="fa fa-linkedin social__icon" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                        <div class="social__col">
-                            <a href="#" class="social__link social__link--facebook">
-                                <i class="fa fa-facebook social__icon" aria-hidden="true"></i>
-                            </a>
-                            <a href="#" class="social__link social__link--google">
-                                <i class="fa fa-google-plus social__icon" aria-hidden="true"></i>
-                            </a>
-                            <a href="#" class="social__link social__link--tumblr">
-                                <i class="fa fa-tumblr social__icon" aria-hidden="true"></i>
-                            </a></div>
+                        <ul class="footer__list footer__list--col social__col">
+                            <li> 
+                                <a href="#" class="social__link social__link--behance">
+                                    <i class="fa fa-behance social__icon" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li> 
+                                <a href="#" class="social__link social__link--twitter">
+                                    <i class="fa fa-twitter social__icon" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li> 
+                                <a href="#" class="social__link social__link--linkedin">
+                                    <i class="fa fa-linkedin social__icon" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="footer__list footer__list--col social__col">
+                            <li> 
+                                <a href="#" class="social__link social__link--facebook">
+                                    <i class="fa fa-facebook social__icon" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li> 
+                                <a href="#" class="social__link social__link--google">
+                                    <i class="fa fa-google-plus social__icon" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li> 
+                                <a href="#" class="social__link social__link--tumblr">
+                                    <i class="fa fa-tumblr social__icon" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <div class="footer__item">
                     <div class="footer__title">Contact us</div>
-                    <div class="footer__text"> + 123 456 789<br>
-                        zippy@skype<br>
-                        enquiry@zippy.com </div>
+                    <ul class="footer__list footer__list--row">
+                        <li><a href="tel:+123456789">+ 123 456 789</a></li>
+                        <li><a href="skype:zippy@skype">zippy@skype</a></li>
+                        <li><a href="mailto:enquiry@zippy.com">enquiry@zippy.com</a></li>
+                    </ul>
                 </div>
             </div>
         </div>

@@ -14,36 +14,20 @@
             color: $primary-color-active;
         }
 
-        &--behance {
-            margin-right: 18px;
-        }
-
         &--twitter {
             font-size: 17px;
-            margin-right: 24px;    
-            top: 2px;
-            left: 2px;
         }
 
         &--linkedin {
             font-size: 20px;
-            top: -3px;
         }
 
         &--facebook {
             font-size: 21px;
-            margin-right: 25px;
-        }
-
-        &--google {
-            margin-right: 21px;
         }
 
         &--tumblr {
             font-size: 19px;
-            position: relative;
-            top: -3px;
-            left: 1px;
         }
     }
 }
