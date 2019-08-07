@@ -11,7 +11,7 @@
         color: $main-color-family;
         text-transform: uppercase;    
         font-size: 10px;
-        margin-bottom: 16px;
+        margin-bottom: 20px;
         letter-spacing: -0.2px;
     }
 
@@ -29,9 +29,12 @@
         li, a {
             font-family: Helvetica;
             font-size: 13.5px;
-            line-height: 1.74;
             color: $main-color-family;
             text-decoration: none;
+        }
+
+        li {
+            margin-bottom: 10px;
         }
     }
 

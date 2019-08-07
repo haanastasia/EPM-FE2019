@@ -1,12 +1,12 @@
 .team {
-    padding: 76px 0px 143px;
+    padding: 69px 0px 137px;
 
     &__col {
         @include flex(row, wrap, space-between, stretch, stretch);
-        padding-top: 52.1px;
+        padding-top: 44px;
 
         &:last-child {
-            padding-top: 67.1px;
+            padding-top: 61.1px;
         }
     }
 
@@ -33,17 +33,14 @@
         font-family: $font-stack;
         font-size: 14.5px;
         font-weight: bold;
-        line-height: 0.48;
         color: $main-color-family;
         text-transform: uppercase;
-        margin-top: 33.2px;
-        margin-bottom: 24px;
+        margin: 28px 0px 11px;
     }
 
     &__job {
         font-family: $font-stack;
         font-size: 14.5px;
-        line-height: 0.48;
         color: rgba(4, 4, 5, 0.39);
     }
 
@@ -79,7 +76,7 @@
 
     &__social {
         position: absolute;
-        top: 62px;
+        top: 64px;
         width: 100%;
         @extend %animation;
         opacity: 0;

@@ -1,9 +1,18 @@
 .nav {
 
+    &__item {
+        margin-right: 33px;
+
+        &:last-child {
+            margin-right: 0px;
+        }
+    }
+
     &__list {
         list-style: none;	
-        @include flex(row, wrap, space-between, flex-start, flex-start);
-        width: 422px;
+        @include flex(row, wrap, flex-start, flex-start, flex-start);
+        min-width: 422px;    
+        max-width: 570px;
     }
 
     &__link {
@@ -11,7 +20,6 @@
         font-family: Montserrat;
         font-size: 10.5px;
         font-weight: bold;
-        line-height: 0.67;
         letter-spacing: normal;
         text-align: left;
         color: #ffffff;

@@ -25,17 +25,21 @@
     }
     
     &__col {
-        margin-top: 34px;
+        margin-top: 22px;
     }
 
     &__label {
         font-size: 10px;
         font-weight: bold;
         font-family: $font-stack;
-        line-height: .67;
         color: #323232;
         text-transform: uppercase;
         margin-left: -1px;
+    }
+
+    &__area {
+        min-height: 40px;
+        max-width: 100%;
     }
 }
 

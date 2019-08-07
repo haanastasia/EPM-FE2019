@@ -1,9 +1,9 @@
 .main-content {
-    padding-top: 85.4px;
+    padding-top: 78.4px;
 
     &__col {
         @include flex(row, wrap, space-between, center, center);    
-        margin-top: 55px;
+        margin-top: 48px;
     }
 
     &__text {

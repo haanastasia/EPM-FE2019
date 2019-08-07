@@ -18,7 +18,11 @@
         margin-left: -1px;
     }
 
+    &__nav {
+        margin-top: 6px;
+    }
+
     .content {
-        @include flex(row, wrap, space-between, flex-end, space-between);
+        @include flex(row, wrap, space-between, flex-start, space-between);
     }
 }

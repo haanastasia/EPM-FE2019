@@ -9,22 +9,19 @@
     &__info {
         @include flex(row, wrap, space-between, flex-start, flex-start);
         font-family: $font-stack;
-        font-size: 10.5px;
         font-weight: bold;
-        line-height: 0.67;
         color: #fefefe;
-        margin-top: 25px;
+        margin-top: 23px;
     }
 
     &__title {
-        text-transform: uppercase;    
-        font-size: 11px;
-        letter-spacing: -0.5px;
-        margin-left: 2px;
+        text-transform: uppercase;
+        letter-spacing: -.5px;        
+        font-size: 10.6px;
     }
 
     &__time {
-        margin-right: -3px;
+        font-size: 10.6px;
     }
 
     &__preview {

@@ -1,9 +1,9 @@
 .projects {
-    padding: 56px 0px 0px;
+    padding: 47px 0px 0px;
 
     &__col {
         @include flex(row, nowrap, flex-start, stretch, stretch);
-        margin-top: 52px;
+        margin-top: 47px;
     }
 
     &__item {
@@ -30,15 +30,15 @@
     }
 
     &__info {
-        padding: 43.6px 31px 45px 43px;
+        padding: 40px 31px 41px 44px;    
+        min-height: 156px;
     }
 
     &__name {
         font-family: $font-stack;
         font-size: 14.5px;
         font-weight: bold;
-        line-height: 0.8;
-        margin-bottom: 13px;
+        margin-bottom: 9px;
         color: $main-color-family;
         text-transform: uppercase;
     }
