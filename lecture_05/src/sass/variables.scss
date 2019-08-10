@@ -13,10 +13,26 @@ $font-stack:             Montserrat;
 	align-content: $align-content;
 }
 
+@mixin rotate($var) {
+	-o-transform: rotate($var);
+	-ms-transform: rotate($var);
+	-moz-transform: rotate($var);
+	-webkit-transform: rotate($var);
+	transform: rotate($var);
+}
+
 %animation {
-	-webkit-transition: all 300ms ease-in-out;
-	-moz-transition: all 300ms ease-in-out;
-	-ms-transition: all 300ms ease-in-out;
-	-o-transition: all 300ms ease-in-out;
-	transition: all 300ms ease-in-out;
+	-webkit-transition: all 350ms ease-in-out;
+	-moz-transition: all 350ms ease-in-out;
+	-ms-transition: all 350ms ease-in-out;
+	-o-transition: all 350ms ease-in-out;
+	transition: all 350ms ease-in-out;
+}
+
+%scale {
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
 }

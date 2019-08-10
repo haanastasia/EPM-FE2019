@@ -16,12 +16,14 @@
     }
 
     &__link {
+        display: inline-block;
         text-transform: uppercase;
         font-family: Montserrat;
         font-size: 10.5px;
         font-weight: bold;
         color: #ffffff;
         text-decoration: none;    
+        @extend %animation;
 
         &--active {
             color: $primary-color;
@@ -29,6 +31,7 @@
 
         &:hover {
             color: $primary-color;    
+            @extend %scale;
         }
     }
 }

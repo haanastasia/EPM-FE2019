@@ -1,18 +1,21 @@
 .social {
 
-    &__col {
-        margin-bottom: 10px;
-    }
-
     &__link {
         color: #000000;
         text-decoration: none;
         font-size: 20px;
-        position: relative;    
-        padding: 8px;
 
         &:hover {
             color: $primary-color-active;
+        }
+    }
+
+    &__icon {
+        @extend %animation;    
+        padding: 8px;
+
+        &:hover {
+            @include rotate(360deg);
         }
     }
 }
