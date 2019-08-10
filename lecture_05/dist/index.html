@@ -151,60 +151,46 @@
         </section>
         <section class="pricing" id="pricing">
             <div class="content">
-                <h2 class="title center title--price">Pricing Table</h2>
-                <table class="pricing__list pricing-list center">
-                    <tr>
-                        <td class="pricing-list__title">STANDARD PLAN</td>
-                        <td class="pricing-list__title">BUSINESS PLAN</td>
-                        <td class="pricing-list__title">PREMIUM PLAN</td>
-                    </tr>
-                    <tr>
-                        <td class="pricing-list__cost">Free</td>
-                        <td class="pricing-list__cost">19$/MONTH</td>
-                        <td class="pricing-list__cost">14$/MONTH</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <ul class="pricing-list__info">
-                                <li>2 GB Available</li>
-                                <li>15 max. contacts</li>
-                                <li>30 Messages/month</li>
-                                <li>Disgusting Ads</li>
-                            </ul>
-                        </td>
-                        <td>
-                            <ul class="pricing-list__info">
-                                <li>10 GB Available</li>
-                                <li>75 max. contacts</li>
-                                <li>120 Messages/month</li>
-                                <li>Ads Free</li>
-                            </ul>
-                        </td>
-                        <td>
-                            <ul class="pricing-list__info">
-                                <li>100 GB Available</li>
-                                <li>Unlimited Contacts</li>
-                                <li>Unlimited Messages/month</li>
-                                <li>Ads Free</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <button class="btn btn--mini pricing-list__btn">Buy</button>
-                        </td>
-                        <td>
-                            <button class="btn btn--mini pricing-list__btn">Buy</button>
-                        </td>
-                        <td>
-                            <button class="btn btn--mini pricing-list__btn">Buy</button>
-                        </td>
-                    </tr>
-                </table>
+                <h2 class="title center">Pricing Table</h2>
+                <div class="pricing__list pricing-list center">
+                    <div class="pricing-list__item">
+                        <div class="pricing-list__title">STANDARD PLAN</div>
+                        <div class="pricing-list__cost">Free</div>
+                        <ul class="pricing-list__info">
+                            <li>2 GB Available</li>
+                            <li>15 max. contacts</li>
+                            <li>30 Messages/month</li>
+                            <li>Disgusting Ads</li>
+                        </ul>
+                        <button class="btn btn--mini pricing-list__btn">Buy</button>
+                    </div>
+                    <div class="pricing-list__item">
+                        <div class="pricing-list__title">BUSINESS PLAN</div>
+                        <div class="pricing-list__cost">19$/MONTH</div>
+                        <ul class="pricing-list__info">
+                            <li>10 GB Available</li>
+                            <li>75 max. contacts</li>
+                            <li>120 Messages/month</li>
+                            <li>Ads Free</li>
+                        </ul>
+                        <button class="btn btn--mini pricing-list__btn">Buy</button>
+                    </div>
+                    <div class="pricing-list__item">
+                        <div class="pricing-list__title">PREMIUM PLAN</div>
+                        <div class="pricing-list__cost">14$/MONTH</div>
+                        <ul class="pricing-list__info">
+                            <li>100 GB Available</li>
+                            <li>Unlimited Contacts</li>
+                            <li>Unlimited Messages/month</li>
+                            <li>Ads Free</li>
+                        </ul>
+                        <button class="btn btn--mini pricing-list__btn">Buy</button>
+                    </div>
+                </div>
             </div>
         </section>
         <section class="video section section--primary">
-            <h2 class="title center title--invert title--video">Video Projects</h2>
+            <h2 class="title center title--invert">Video Projects</h2>
             <div class="video__slider slider video-slider">
                 <div class="video-slider__item">
                     <div class="video-slider__preview">
@@ -237,7 +223,7 @@
         </section>
         <section class="team" id="team">
             <div class="content">
-                <h2 class="title center title--team">Zippy Team</h2>
+                <h2 class="title center">Zippy Team</h2>
                 <div class="team__col center">
                     <div class="team__item">
                         <div class="team__preview">
@@ -378,7 +364,7 @@
         </section>
         <section class="life section section--second">
             <div class="content">
-                <h2 class="title center title--life">Life in Zippy</h2>
+                <h2 class="title center">Life in Zippy</h2>
                 <div class="gallery gallery-life">
                     <div class="gallery__main-photo">
                         <img src="img/gallery1.png" alt="Life in Zippy">
@@ -402,7 +388,7 @@
             </div>
         </section>
         <section class="subscription">
-            <h2 class="title center title--invert title--subscription">Newsletter Signup</h2>
+            <h2 class="title center title--invert">Newsletter Signup</h2>
             <form class="subscription__form form form-subscription" name="subscription_form" method="post">
                 <input class="form-subscription__control form__control" placeholder="abc@example.com">
                 <button class="form-subscription__btn btn btn--square" type="submit">sign up</button>
@@ -410,9 +396,9 @@
         </section>
         <section class="blog" id="blog">
             <div class="content">
-                <h2 class="title center title--blog">Blog</h2>
+                <h2 class="title center">Blog</h2>
                 <div class="blog__col center">
-                    <div class="blog__item">
+                    <div class="blog__item" tabindex="0">
                         <img src="img/blog1.png" class="blog__preview" alt="Blog">
                         <div class="blog__title">
                             LOREM IPSUM dolor
@@ -424,7 +410,7 @@
                             vel odio vel felis placerat pharetra ut vitae felis. </p>
                         <button class="btn btn--middle blog__btn">READ MORE</button>
                     </div>
-                    <div class="blog__item">
+                    <div class="blog__item" tabindex="0">
                         <img src="img/blog2.png" class="blog__preview" alt="Blog">
                         <div class="blog__title">
                             LOREM IPSUM dolor
@@ -436,7 +422,7 @@
                             vel odio vel felis placerat pharetra ut vitae felis. </p>
                         <button class="btn btn--middle blog__btn">READ MORE</button>
                     </div>
-                    <div class="blog__item">
+                    <div class="blog__item" tabindex="0">
                         <img src="img/blog3.png" class="blog__preview" alt="Blog">
                         <div class="blog__title">
                             LOREM IPSUM dolor
@@ -457,7 +443,7 @@
                     src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad9c47dc2c651d0cc8a22e4f7424391d3d44a30d7d90e9e730e48d2f485a7af00&amp;width=100%25&amp;height=653&amp;lang=ru_RU&amp;scroll=false"></script>
             </div>
             <div class="contact__info">
-                <h2 class="title title--contact">Contact</h2>
+                <h2 class="title">Contact</h2>
                 <form class="form contact__form form-contact" name="contact_form" method="post">
                     <div class="form__col">
                         <div class="form__line">
@@ -493,45 +479,45 @@
             <div class="footer__col center">
                 <div class="footer__item">
                     <div class="footer__title">Office Address</div>
-                    <ul class="footer__list footer__list--row">
-                        <li>Lorem Ipsum dolor, 234</li>
-                        <li>1200 Consecture</li>
-                        <li>Adipsching</li>
+                    <ul class="footer__list footer__list--row footer-list">
+                        <li class="footer-list__item">Lorem Ipsum dolor, 234</li>
+                        <li class="footer-list__item">1200 Consecture</li>
+                        <li class="footer-list__item">Adipsching</li>
                     </ul>
                 </div>
                 <div class="footer__item">
                     <div class="footer__title">Follow us</div>
                     <div class="footer__social social left">
                         <ul class="footer__list footer__list--col social__col">
-                            <li> 
-                                <a href="#" class="social__link social__link--behance">
+                            <li>
+                                <a href="#" class="social__link">
                                     <i class="fa fa-behance social__icon" aria-hidden="true"></i>
                                 </a>
                             </li>
-                            <li> 
-                                <a href="#" class="social__link social__link--twitter">
+                            <li>
+                                <a href="#" class="social__link">
                                     <i class="fa fa-twitter social__icon" aria-hidden="true"></i>
                                 </a>
                             </li>
-                            <li> 
-                                <a href="#" class="social__link social__link--linkedin">
+                            <li>
+                                <a href="#" class="social__link">
                                     <i class="fa fa-linkedin social__icon" aria-hidden="true"></i>
                                 </a>
                             </li>
                         </ul>
                         <ul class="footer__list footer__list--col social__col">
-                            <li> 
-                                <a href="#" class="social__link social__link--facebook">
+                            <li>
+                                <a href="#" class="social__link">
                                     <i class="fa fa-facebook social__icon" aria-hidden="true"></i>
                                 </a>
                             </li>
-                            <li> 
-                                <a href="#" class="social__link social__link--google">
+                            <li>
+                                <a href="#" class="social__link">
                                     <i class="fa fa-google-plus social__icon" aria-hidden="true"></i>
                                 </a>
                             </li>
-                            <li> 
-                                <a href="#" class="social__link social__link--tumblr">
+                            <li>
+                                <a href="#" class="social__link">
                                     <i class="fa fa-tumblr social__icon" aria-hidden="true"></i>
                                 </a>
                             </li>
@@ -540,10 +526,16 @@
                 </div>
                 <div class="footer__item">
                     <div class="footer__title">Contact us</div>
-                    <ul class="footer__list footer__list--row">
-                        <li><a href="tel:+123456789">+ 123 456 789</a></li>
-                        <li><a href="skype:zippy@skype">zippy@skype</a></li>
-                        <li><a href="mailto:enquiry@zippy.com">enquiry@zippy.com</a></li>
+                    <ul class="footer__list footer__list--row footer-list">
+                        <li class="footer-list__item">
+                            <a class="footer-list__link" href="tel:+123456789">+ 123 456 789</a>
+                        </li>
+                        <li class="footer-list__item">
+                            <a class="footer-list__link" href="skype:zippy@skype">zippy@skype</a>
+                        </li>
+                        <li class="footer-list__item">
+                            <a class="footer-list__link" href="mailto:enquiry@zippy.com">enquiry@zippy.com</a>
+                        </li>
                     </ul>
                 </div>
             </div>

@@ -2,26 +2,12 @@
     padding-top: 65px; 
 
     &__col {
-        margin: 52px 0px 88px;
-
-        &:after {
-            content: ".";
-            display: block;
-            height: 0;
-            clear: both;
-            visibility: hidden;
-        }
+        margin: 0px 0px 88px;
+        @include flex(row, wrap, space-between, stretch, stretch);
     }
     
     &__item {
         width: 206px;    
-        float: left;
-        margin-right: 36px;
-
-        &:nth-child(3) {
-            margin-right: 0px;    
-            margin-left: 2px;
-        }
     }
     
     &__title {
@@ -30,12 +16,14 @@
         font-weight: bold;
         color: $main-color-family;    
         width: 169px;
-        margin: 29px auto 16px;
+        margin: 0px auto 16px;
         text-transform: uppercase;
     }
 
     &__preview {
         max-width: 100%;
+        margin-bottom: 29px;
+        @extend %animation;
 
         &:hover {
             filter: brightness(110%);
@@ -46,7 +34,8 @@
         font-family: Helvetica;
         font-size: 13.5px;
         line-height: 1.74;
-        color: rgba(4, 4, 5, 0.5);
+        color: rgba( $main-color-family, .5 );
+        margin-bottom: 15px;
     }
 
     &__text {
@@ -54,7 +43,7 @@
         font-size: 13.5px;
         line-height: 1.74;
         color: $main-color-family;    
-        margin: 15px 0 28px;
+        margin: 0px 0 28px;
     }
 
     &__btn {

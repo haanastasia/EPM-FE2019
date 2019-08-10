@@ -3,10 +3,10 @@
 
     &__col {
         @include flex(row, wrap, space-between, stretch, stretch);
-        padding-top: 44px;
+        margin-bottom: 61.1px;
 
         &:last-child {
-            padding-top: 61.1px;
+            margin-bottom: 0px;
         }
     }
 
@@ -35,7 +35,7 @@
         font-weight: bold;
         color: $main-color-family;
         text-transform: uppercase;
-        margin: 28px 0px 11px;
+        margin: 0px 0px 11px;
     }
 
     &__job {
@@ -47,7 +47,8 @@
     &__preview {
         border-radius: 50%;
         overflow: hidden;
-        height: 172.4px;    
+        height: 172.4px;   
+        margin-bottom: 28px; 
         position: relative;
 
         &:after {

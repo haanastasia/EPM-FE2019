@@ -1,9 +1,9 @@
 .gallery {
-    margin-top: 37px;
     max-width: 692px;
 
     &__main-photo {
-        height: 429px;
+        max-height: 429px;
+        margin-bottom: 14px;
 
         img {
             width: 100%;
@@ -32,7 +32,6 @@
     }
 
     &__dotted {
-        margin-top: 14px;
         @include flex(row, wrap, space-between, stretch, stretch);
     }
 

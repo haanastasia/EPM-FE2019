@@ -2,30 +2,18 @@
     padding: 77px 0px 87px;
 
     &__list {
-        width: 100%;
-        margin-top: 44px;    
-        border-spacing: 0px;
-        border-collapse: separate;
+        @include flex(row, wrap, space-between, stretch, stretch);
     }
 
     &-list {
 
-        td {
-            border-left: 2px solid rgba(0, 0, 0, 0.2);
-
-            &:first-child {
-                border-left: 0px;
-                width: 215px;
-                padding-right: 11px;
-            }
+        &__item {
+            min-width: 225px;
 
             &:nth-child(2) {
-                width: 237px;
-            }
-
-            &:nth-child(3) {
-                padding-left: 3px;
-            }
+                border-right: 2px solid rgba($main-color-family, .1);
+                border-left: 2px solid rgba($main-color-family, .1);
+            }   
         }
 
         &__title {

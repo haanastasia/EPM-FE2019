@@ -20,13 +20,8 @@
         font-family: Montserrat;
         font-size: 10.5px;
         font-weight: bold;
-        letter-spacing: normal;
-        text-align: left;
         color: #ffffff;
         text-decoration: none;    
-        top: 4px;
-        position: relative;
-        right: 1px;
 
         &--active {
             color: $primary-color;
@@ -34,7 +29,6 @@
 
         &:hover {
             color: $primary-color;    
-            text-decoration: underline;
         }
     }
 }

@@ -25,17 +25,6 @@
         &--row {
             @include flex(column, nowrap, flex-start, stretch, stretch);
         }
-
-        li, a {
-            font-family: Helvetica;
-            font-size: 13.5px;
-            color: $main-color-family;
-            text-decoration: none;
-        }
-
-        li {
-            margin-bottom: 10px;
-        }
     }
 
     &__social {

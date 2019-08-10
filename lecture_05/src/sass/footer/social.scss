@@ -8,26 +8,11 @@
         color: #000000;
         text-decoration: none;
         font-size: 20px;
-        position: relative;
+        position: relative;    
+        padding: 8px;
 
         &:hover {
             color: $primary-color-active;
-        }
-
-        &--twitter {
-            font-size: 17px;
-        }
-
-        &--linkedin {
-            font-size: 20px;
-        }
-
-        &--facebook {
-            font-size: 21px;
-        }
-
-        &--tumblr {
-            font-size: 19px;
         }
     }
 }

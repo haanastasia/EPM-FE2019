@@ -3,7 +3,6 @@
 
     &__col {
         @include flex(row, nowrap, flex-start, stretch, stretch);
-        margin-top: 47px;
     }
 
     &__item {
