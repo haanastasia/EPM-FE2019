@@ -1,0 +1,40 @@
+.nav {
+
+    &__item {
+        margin-right: 33px;
+
+        &:last-child {
+            margin-right: 0px;
+        }
+    }
+
+    &__list {
+        list-style: none;	
+        @include flex(row, wrap, flex-start, flex-start, flex-start);
+        min-width: 422px;    
+        max-width: 570px;
+    }
+
+    &__link {
+        text-transform: uppercase;
+        font-family: Montserrat;
+        font-size: 10.5px;
+        font-weight: bold;
+        letter-spacing: normal;
+        text-align: left;
+        color: #ffffff;
+        text-decoration: none;    
+        top: 4px;
+        position: relative;
+        right: 1px;
+
+        &--active {
+            color: $primary-color;
+        }
+
+        &:hover {
+            color: $primary-color;    
+            text-decoration: underline;
+        }
+    }
+}

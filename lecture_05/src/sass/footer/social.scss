@@ -1,0 +1,33 @@
+.social {
+
+    &__col {
+        margin-bottom: 10px;
+    }
+
+    &__link {
+        color: #000000;
+        text-decoration: none;
+        font-size: 20px;
+        position: relative;
+
+        &:hover {
+            color: $primary-color-active;
+        }
+
+        &--twitter {
+            font-size: 17px;
+        }
+
+        &--linkedin {
+            font-size: 20px;
+        }
+
+        &--facebook {
+            font-size: 21px;
+        }
+
+        &--tumblr {
+            font-size: 19px;
+        }
+    }
+}

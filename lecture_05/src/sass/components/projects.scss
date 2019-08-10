@@ -1,0 +1,63 @@
+.projects {
+    padding: 47px 0px 0px;
+
+    &__col {
+        @include flex(row, nowrap, flex-start, stretch, stretch);
+        margin-top: 47px;
+    }
+
+    &__item {
+        width: 25%;
+        min-width: 351px;
+        @extend %animation;
+
+        &:nth-child(2n+1) {
+            background-color: $second-color;
+        }
+
+        &:nth-child(2n) {
+            background-color: #e4e4e4;
+        }
+
+        &:hover {
+            background-color: $primary-color;
+
+            .projects__btn {
+                background-color: $primary-color-active;
+                color: #ffffff;
+            }
+        }
+    }
+
+    &__info {
+        padding: 40px 31px 41px 44px;    
+        min-height: 156px;
+    }
+
+    &__name {
+        font-family: $font-stack;
+        font-size: 14.5px;
+        font-weight: bold;
+        margin-bottom: 9px;
+        color: $main-color-family;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        font-family: Helvetica;
+        font-size: 13.5px;
+        line-height: 1.74;
+        color: rgba(4, 4, 5, 0.5);
+        margin-bottom: 14px;    
+        letter-spacing: -0.1px;
+    }
+
+    &__preview {
+        width: 100%;
+        height: 484.1px;
+    }
+
+    &__btn {
+        background-color: #ffffff;    
+    }
+}

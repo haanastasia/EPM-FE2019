@@ -1,0 +1,67 @@
+.pricing {
+    padding: 77px 0px 87px;
+
+    &__list {
+        width: 100%;
+        margin-top: 44px;    
+        border-spacing: 0px;
+        border-collapse: separate;
+    }
+
+    &-list {
+
+        td {
+            border-left: 2px solid rgba(0, 0, 0, 0.2);
+
+            &:first-child {
+                border-left: 0px;
+                width: 215px;
+                padding-right: 11px;
+            }
+
+            &:nth-child(2) {
+                width: 237px;
+            }
+
+            &:nth-child(3) {
+                padding-left: 3px;
+            }
+        }
+
+        &__title {
+            font-family: $font-stack;
+            font-size: 14.5px;
+            font-weight: bold;
+            color: $main-color-family;
+            padding-bottom: 17px;
+        }
+
+        &__cost {
+            font-family: $font-stack;
+            letter-spacing: 1.1px;
+            font-size: 13.9px;
+            color: rgba(4, 4, 5, 0.39);
+        }
+
+        &__info {
+            padding: 17px 0 14px;
+            list-style: none;
+            
+            li {
+                font-family: Helvetica;
+                font-size: 10.5px;
+                color: $main-color-family;    
+                margin-bottom: 10px;
+            }
+        }
+
+        &__btn {
+            background-color: $primary-color;
+
+            &:hover {
+                background-color: $primary-color-active;
+                color: #ffffff;
+            }
+        }
+    }
+}
