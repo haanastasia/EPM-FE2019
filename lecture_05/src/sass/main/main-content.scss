@@ -3,7 +3,6 @@
 
     &__col {
         @include flex(row, wrap, space-between, center, center);    
-        margin-top: 48px;
     }
 
     &__text {
@@ -12,7 +11,6 @@
         font-weight: 100;
         color: $main-color-family;    
         max-width: 442px;    
-        margin-top: 20px;
     }
 
     &__advantage {
@@ -26,8 +24,6 @@
 
         img {
             width: 100%;    
-            margin-top: 6px;
-            margin-left: -2px;
         }
     }
 }
