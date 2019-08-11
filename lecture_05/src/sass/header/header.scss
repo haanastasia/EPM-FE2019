@@ -15,6 +15,10 @@
         text-align: left;
         text-transform: uppercase;
         color: #fff;
+
+        &:hover + .cat-rocket {
+            opacity: 1;
+        }
     }
 
     &__nav {
