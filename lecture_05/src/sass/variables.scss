@@ -29,6 +29,14 @@ $font-stack:             Montserrat;
 	transition: all 350ms ease-in-out;
 }
 
+%slow-animation {
+	-webkit-transition: all 650ms ease-out;
+	-moz-transition: all 650ms ease-out;
+	-ms-transition: all 650ms ease-out;
+	-o-transition: all 650ms ease-out;
+	transition: all 650ms ease-out;
+}
+
 %scale {
     -o-transform: scale(1.2);
     -ms-transform: scale(1.2);

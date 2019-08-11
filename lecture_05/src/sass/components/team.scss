@@ -87,16 +87,23 @@
         color: white;
         font-size: 33px;
         text-decoration: none;
+        display: inline-block;
+        min-width: 30px;
+        @extend %animation;    
 
         &--twitter {
             font-size: 41px;
-            margin-left: 15px;    
-            margin-right: 4px;
+            margin-left: 8px;
+            margin-right: 12px;
         }
 
         &--facebook {
             margin-left: 19px;
             margin-right: 2px;
+        }
+
+        &:hover {
+            @include rotate(360deg);
         }
     }
 }

@@ -1,5 +1,6 @@
 .pricing {
-    padding: 77px 0px 87px;
+    padding: 77px 0px 87px;    
+    overflow: hidden;
 
     &__list {
         @include flex(row, wrap, space-between, stretch, stretch);
@@ -14,6 +15,14 @@
                 border-right: 2px solid rgba($main-color-family, .1);
                 border-left: 2px solid rgba($main-color-family, .1);
             }   
+
+            &:hover > .pricing-list__content {
+                transform: perspective(300px) scale3d(1.2, 1.2, 2) rotate3d(0, 1, 0, 360deg);
+            }
+        }
+
+        &__content {
+            @extend %slow-animation; 
         }
 
         &__title {
@@ -21,7 +30,8 @@
             font-size: 14.5px;
             font-weight: bold;
             color: $main-color-family;
-            padding-bottom: 17px;
+            padding-bottom: 17px;    
+            text-transform: uppercase;
         }
 
         &__cost {
