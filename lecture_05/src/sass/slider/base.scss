@@ -10,10 +10,6 @@
         background-color: #ffffff;
         cursor: pointer;
 
-        &:first-child {
-            margin-left: -3px;
-        }
-
         &--active {
             opacity: 1;
         }

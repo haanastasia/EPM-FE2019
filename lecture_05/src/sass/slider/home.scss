@@ -3,9 +3,11 @@
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+    background-color: #24415f;
     
     &__item {
         height: 100%;
+        overflow: hidden;
         @include flex(row, wrap, flex-start, center, center);
     }
  
