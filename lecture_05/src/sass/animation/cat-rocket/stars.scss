@@ -1,0 +1,60 @@
+.stars {
+    list-style: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  
+    @for $i from 1 through 130 {
+        $counter: 50*$i;
+        
+        li:nth-of-type(#{$i}){
+            -webkit-animation-delay: #{-$counter}s;
+            animation-delay: #{-$counter}s;
+            -webkit-animation-duration: #{$counter * .02}s;
+            animation-duration: #{$counter * .02}s;
+            top: random(600) + px;
+            left: random(1400) + px;
+        }
+    }
+    
+    li {
+        -webkit-animation-name: stars;
+        animation-name: stars;
+        -webkit-animation-direction: normal;
+        animation-direction: normal;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+        height: 2px;
+        width: 2px;
+        background: white;
+        position: absolute;
+        border-radius: 50%;
+        box-shadow: 0px 0px 20px 0px white;
+        left: 10px;
+        top: 10px;
+        z-index: 0;
+    }
+}
+
+@-webkit-keyframes stars {
+    0% {
+      -webkit-transform: translateX(100vw);
+      transform: translateX(100vw);
+    }
+    100% {
+      -webkit-transform: translateX(-100vw);
+      transform: translateX(-100vw);
+    }
+}
+
+@keyframes stars {
+    0% {
+        -webkit-transform: translateX(100vw);
+        transform: translateX(100vw);
+    }
+    100% {
+        -webkit-transform: translateX(-100vw);
+        transform: translateX(-100vw);
+    }
+}

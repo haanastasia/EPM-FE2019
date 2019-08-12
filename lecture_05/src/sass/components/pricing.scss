@@ -10,6 +10,7 @@
 
         &__item {
             min-width: 225px;
+            perspective: 300px;
 
             &:nth-child(2) {
                 border-right: 2px solid rgba($main-color-family, .1);
@@ -17,7 +18,7 @@
             }   
 
             &:hover > .pricing-list__content {
-                transform: perspective(300px) scale3d(1.2, 1.2, 2) rotate3d(0, 1, 0, 360deg);
+                transform: scale3d(1.2,1.2,2) rotateX(1turn);
             }
         }
 

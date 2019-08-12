@@ -1,0 +1,13 @@
+.rocket__cats img {
+    width: 200px;
+    z-index: 1;
+    position: relative;
+    transform: rotate(-42deg);
+    top: 33px;
+}
+
+.cat-rocket {
+    position: absolute;
+    opacity: 0;    
+    z-index: -1;
+}

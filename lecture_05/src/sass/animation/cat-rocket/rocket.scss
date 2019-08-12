@@ -1,0 +1,13 @@
+.rocket {
+    height: 200px;
+    width: 400px;
+    -webkit-animation: fly 8.8s infinite alternate cubic-bezier(0.45, 0.05, 0.55, 0.95);
+    animation: fly 8.8s infinite alternate cubic-bezier(0.45, 0.05, 0.55, 0.95);
+    position: relative;
+    margin: 0 auto;
+    -webkit-transform-origin: left;
+    transform-origin: left;
+    z-index: 10;
+    top: 280px;
+    left: 450px;
+}
