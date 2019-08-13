@@ -9,9 +9,7 @@
         $counter: 50*$i;
         
         li:nth-of-type(#{$i}){
-            -webkit-animation-delay: #{-$counter}s;
             animation-delay: #{-$counter}s;
-            -webkit-animation-duration: #{$counter * .02}s;
             animation-duration: #{$counter * .02}s;
             top: random(600) + px;
             left: random(1400) + px;
@@ -19,11 +17,8 @@
     }
     
     li {
-        -webkit-animation-name: stars;
         animation-name: stars;
-        -webkit-animation-direction: normal;
         animation-direction: normal;
-        -webkit-animation-iteration-count: infinite;
         animation-iteration-count: infinite;
         height: 2px;
         width: 2px;
@@ -39,22 +34,18 @@
 
 @-webkit-keyframes stars {
     0% {
-      -webkit-transform: translateX(100vw);
       transform: translateX(100vw);
     }
     100% {
-      -webkit-transform: translateX(-100vw);
       transform: translateX(-100vw);
     }
 }
 
 @keyframes stars {
     0% {
-        -webkit-transform: translateX(100vw);
         transform: translateX(100vw);
     }
     100% {
-        -webkit-transform: translateX(-100vw);
         transform: translateX(-100vw);
     }
 }

@@ -8,34 +8,28 @@
     
     &__item {
         width: 206px;   
+        background: white;
         @extend %slow-animation;  
 
-        &:nth-child(1) {
-            order: 1;
-        }
-
-        &:nth-child(2) {
-            order: 2;
-        }   
-
-        &:nth-child(3) {
-            order: 3;
-        }   
-
         &:focus {
-            transform: scale(1.1, 1.1);    
-            order: 1;
-            outline: 1px solid $primary-color;
-
-            & + div {
-                order: -1;
-
-                &:last-child {
-                    order: 3;
-                }
-            }
+            transform: scale(1.1) translate(-108%,0);    
+            outline: 1px solid $primary-color;    
+            position: relative;
+            z-index: 1;
         }
-    }
+
+        &:nth-child(1):focus {
+            transform: scale(1.1) translate(108%,0);
+        }
+
+        &:nth-child(2):focus {
+            transform: scale(1.1) translate(0,0);
+        }
+
+        &:nth-child(31):focus {
+            transform: scale(1.1) translate(-108%,0);
+        }
+     }
     
     &__title {
         font-family: $font-stack;  

@@ -2,6 +2,7 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const autoprefixer = require('autoprefixer');
 
 var clientConfig = (function webpackConfig() {
     const publicPath = 'dist/';
@@ -32,6 +33,17 @@ var clientConfig = (function webpackConfig() {
                         loader: 'css-loader',
                         options: {
                             minimize: true
+                        }
+                    },
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            plugins: [
+                                autoprefixer({
+                                    browsers:['ie >= 8', 'last 4 version']
+                                })
+                            ],
+                            sourceMap: true
                         }
                     },
                     'sass-loader'

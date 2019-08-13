@@ -14,7 +14,8 @@
         padding: 10px;    
         margin-bottom: 13px;
         max-height: 126px;
-        max-width: calc(100% - 20px);
+        max-width: calc(100% - 20px);    
+        min-width: 85%;
     }
 
     &__btn {

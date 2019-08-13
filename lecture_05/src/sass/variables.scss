@@ -14,33 +14,17 @@ $font-stack:             Montserrat;
 }
 
 @mixin rotate($var) {
-	-o-transform: rotate($var);
-	-ms-transform: rotate($var);
-	-moz-transform: rotate($var);
-	-webkit-transform: rotate($var);
 	transform: rotate($var);
 }
 
 %animation {
-	-webkit-transition: all 350ms ease-in-out;
-	-moz-transition: all 350ms ease-in-out;
-	-ms-transition: all 350ms ease-in-out;
-	-o-transition: all 350ms ease-in-out;
 	transition: all 350ms ease-in-out;
 }
 
 %slow-animation {
-	-webkit-transition: all 650ms ease-out;
-	-moz-transition: all 650ms ease-out;
-	-ms-transition: all 650ms ease-out;
-	-o-transition: all 650ms ease-out;
 	transition: all 650ms ease-out;
 }
 
 %scale {
-    -o-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    -moz-transform: scale(1.2);
-    -webkit-transform: scale(1.2);
     transform: scale(1.2);
 }

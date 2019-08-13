@@ -18,7 +18,7 @@
             }   
 
             &:hover > .pricing-list__content {
-                transform: scale3d(1.2,1.2,2) rotateX(1turn);
+                transform: scale3d(1.2,1.2,2) rotateY(360deg);
             }
         }
 

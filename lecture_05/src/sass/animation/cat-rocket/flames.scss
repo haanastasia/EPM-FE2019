@@ -12,21 +12,15 @@
         $counter: 1*$i;
 
         li:nth-of-type(#{$i}){
-            -webkit-animation-delay: #{-$counter}s;
             animation-delay: #{-$counter}s;
-            -webkit-animation-duration: #{$counter * .1}s;
             animation-duration: #{$counter * .1}s;
         }
     }
 
     li {
-        -webkit-animation-name: flicker;
         animation-name: flicker;
-        -webkit-animation-direction: alternate;
         animation-direction: alternate;
-        -webkit-animation-iteration-count: infinite;
         animation-iteration-count: infinite;
-        -webkit-transform: rotate(-135deg) scale(1.2, 1.2);
         transform: rotate(-135deg) scale(1.2, 1.2);
         border-radius: 50% 0;
         position: absolute;

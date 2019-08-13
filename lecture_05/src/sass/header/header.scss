@@ -21,10 +21,6 @@
         }
     }
 
-    &__nav {
-        padding-top: 10px;
-    }
-
     .content {
         @include flex(row, wrap, space-between, flex-start, space-between);
     }

@@ -23,6 +23,7 @@
         font-weight: bold;
         color: #ffffff;
         text-decoration: none;    
+        padding: 10px 0px 10px;
         @extend %animation;
 
         &--active {
