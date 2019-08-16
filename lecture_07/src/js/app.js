@@ -1,3 +1,5 @@
+import 'bootstrap';
+
 import '../sass/styles.scss';
 
 function importAll(r) {

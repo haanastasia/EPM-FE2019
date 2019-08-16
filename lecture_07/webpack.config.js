@@ -40,7 +40,7 @@ var clientConfig = (function webpackConfig() {
                         options: {
                             plugins: [
                                 autoprefixer({
-                                    browsers:['ie >= 8', 'last 4 version']
+                                    overrideBrowserslist:  ['last 2 versions']
                                 })
                             ],
                             sourceMap: true
