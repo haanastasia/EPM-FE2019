@@ -1,0 +1,46 @@
+.footer {
+    padding: 78px 0px 122px;
+
+    &__col {
+        @include flex(row, wrap, space-between, stretch, stretch);
+    }
+
+    &__title {
+        font-family: $font-stack;
+        font-weight: bold;
+        color: $main-color-family;
+        text-transform: uppercase;    
+        font-size: 10px;
+        margin-bottom: 20px;
+        letter-spacing: -0.2px;
+    }
+
+    &__list {
+        list-style: none;
+
+        &--col {
+            @include flex(row, wrap, space-around, flex-start, stretch);
+        }
+ 
+        &--row {
+            @include flex(column, nowrap, flex-start, stretch, stretch);
+        }
+    }
+
+    &__social {
+        width: 113px;
+        margin: 0 auto;    
+    }
+
+    &__item {
+        min-width: 205px;
+
+        &:last-child {
+            min-width: 218px;
+        }
+
+        &:nth-child(2) {
+            margin-left: 13px;
+        }
+    }
+}

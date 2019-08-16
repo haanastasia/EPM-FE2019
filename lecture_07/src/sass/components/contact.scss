@@ -1,0 +1,18 @@
+.contact {
+    @include flex(row, wrap, space-between, stretch, stretch);
+    
+    &__map {
+        width: 693px;
+    }
+
+    &__info {
+        width: 610px;
+        padding: 41px 48.4px 52px;
+        background-color: $primary-color;
+    }
+
+    &__form {
+        width: 311px;    
+        margin-left: -5px;
+    }
+}

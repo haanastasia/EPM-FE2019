@@ -1,0 +1,10 @@
+.section {
+
+    &--primary {
+        background-color: $primary-color-active;
+    }
+
+    &--second {
+        background-color: $second-color;
+    }
+}
