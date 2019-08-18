@@ -1,10 +1,6 @@
 .footer {
     padding: 78px 0px 122px;
 
-    &__col {
-        @include flex(row, wrap, space-between, stretch, stretch);
-    }
-
     &__title {
         font-family: $font-stack;
         font-weight: bold;
@@ -31,16 +27,19 @@
         width: 113px;
         margin: 0 auto;    
     }
+}
 
-    &__item {
-        min-width: 205px;
+@media (max-width: $md)  {
 
-        &:last-child {
-            min-width: 218px;
+    .footer {
+        padding: 40px 0px;    
+
+        &__title {
+            margin-bottom: 15px;
         }
 
-        &:nth-child(2) {
-            margin-left: 13px;
+        &__item {
+            margin-bottom: 20px;
         }
     }
 }

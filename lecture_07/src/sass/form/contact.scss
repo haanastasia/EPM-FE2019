@@ -4,7 +4,7 @@
         box-shadow: 0.5px 0.9px 1px 0 rgba(22,22,23,.09);
         border-radius: 0;
         height: 44px;
-        width: 291px;
+        width: 100%;
         padding: 0px 10px;
         margin: 0px 0 19px;
     }
@@ -14,8 +14,7 @@
         padding: 10px;    
         margin-bottom: 13px;
         max-height: 126px;
-        max-width: calc(100% - 20px);    
-        min-width: 85%;
+        width: 100%;
     }
 
     &__btn {

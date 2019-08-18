@@ -3,6 +3,9 @@ $primary-color-active: #62497c;
 $main-color-family:    #040405;
 $second-color:         #efefef;
 $font-stack:             Montserrat;
+$sm:                     576px;
+$md:                     768px;
+$lg:                     992px;
 
 @mixin flex($direction, $wrap, $content, $items, $align-content) {
     display: flex; 

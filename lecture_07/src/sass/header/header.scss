@@ -6,6 +6,10 @@
     z-index: 1;
     padding: 41px 0px;
 
+    &__nav {
+        padding: 0px;
+    }
+
     &__logo {
         font-family: $font-stack;
         font-size: 26.5px;

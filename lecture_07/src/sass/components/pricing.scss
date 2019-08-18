@@ -2,14 +2,9 @@
     padding: 77px 0px 87px;    
     overflow: hidden;
 
-    &__list {
-        @include flex(row, wrap, space-between, stretch, stretch);
-    }
-
     &-list {
 
         &__item {
-            min-width: 225px;
             perspective: 300px;
 
             &:nth-child(2) {
@@ -62,5 +57,13 @@
                 color: #ffffff;
             }
         }
+    }
+}
+
+
+@media (max-width: $md)  {
+
+    .pricing {
+        padding: 40px 0px;    
     }
 }

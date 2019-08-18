@@ -1,14 +1,19 @@
 .home-slider {
     height: 692.6px;
-    background-position: center;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-color: #24415f;
+    background-color: #24415f;    
+    background-position: top center;
     
     &__item {
         height: 100%;
         overflow: hidden;
         @include flex(row, wrap, flex-start, center, center);
+
+        * {
+            position: relative;
+            z-index: 1;
+        }
     }
  
     &__title {
@@ -19,8 +24,6 @@
         color: #fff;
         margin-bottom: 29px;
         letter-spacing: -0.9px;
-        position: relative;
-        z-index: 1;
     }
 
     &__text { 
@@ -36,11 +39,31 @@
     &__btn {
         background-color: $primary-color;    
         margin-bottom: 78px;    
-        margin-left: 2px;
 
         &:hover {
             background-color: $primary-color-active;
             color: #ffffff;
         }
     } 
+}
+
+@media (max-width: $md)  {
+
+    .home-slider {
+        height: 100vh;
+     
+        &__title {
+            font-size: 27px;
+            margin-bottom: 20px;
+        }
+    
+        &__text { 
+            font-size: 14px;
+            margin: 0px 0 26px;
+        }
+    
+        &__btn {
+            margin-bottom: 0px;    
+        } 
+    }
 }

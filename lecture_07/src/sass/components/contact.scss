@@ -1,18 +1,38 @@
 .contact {
-    @include flex(row, wrap, space-between, stretch, stretch);
-    
-    &__map {
-        width: 693px;
-    }
 
     &__info {
-        width: 610px;
         padding: 41px 48.4px 52px;
         background-color: $primary-color;
     }
 
     &__form {
         width: 311px;    
-        margin-left: -5px;
+    }
+}
+
+
+@media (max-width: $md)  {
+
+    .contact {
+    
+        &__info {
+            padding: 30px;
+
+        }
+    }
+}
+
+@media (max-width: $sm)  {
+
+    .contact {
+    
+        &__info {
+            padding: 20px;
+
+        }
+
+        &__form {
+            width: 100%;    
+        }
     }
 }

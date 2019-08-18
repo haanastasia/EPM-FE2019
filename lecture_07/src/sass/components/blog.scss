@@ -3,7 +3,6 @@
 
     &__col {
         margin: 0px 0px 88px;
-        @include flex(row, wrap, space-between, stretch, stretch);
     }
     
     &__item {

@@ -7,3 +7,10 @@
         margin-left: -388px;
     }
 }
+
+@media (max-width: $md)  {
+
+    .video {
+        padding: 40px 0px;    
+    }
+}

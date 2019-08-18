@@ -10,9 +10,10 @@
 
     &__list {
         list-style: none;	
-        @include flex(row, wrap, flex-start, flex-start, flex-start);
-        min-width: 422px;    
-        max-width: 570px;
+        @include flex(row, wrap, flex-start, flex-start, flex-start); 
+        max-width: 570px;    
+        margin-bottom: 0px;
+        margin-top: -2px;
     }
 
     &__link {
@@ -21,8 +22,7 @@
         font-family: Montserrat;
         font-size: 10.5px;
         font-weight: bold;
-        color: #ffffff;
-        text-decoration: none;    
+        color: #ffffff;   
         padding: 10px 0px 10px;
         @extend %animation;
 
@@ -31,7 +31,8 @@
         }
 
         &:hover {
-            color: $primary-color;    
+            color: $primary-color;   
+            text-decoration: none;  
             @extend %scale;
         }
     }

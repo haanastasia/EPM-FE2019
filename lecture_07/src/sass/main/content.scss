@@ -5,18 +5,13 @@
 }
 
 body {
-    width: 1400px;    
+    max-width: 1400px;    
     margin: 0 auto;    
-    overflow-x: hidden;
 }
 
 .content {
-    width: 694px;    
+    max-width: 694px;    
     margin: 0 auto;
-
-    &--full-width {
-        width: 100%;
-    }
 }
 
 .center {

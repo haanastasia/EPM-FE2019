@@ -1,13 +1,7 @@
 .projects {
     padding: 47px 0px 0px;
-
-    &__col {
-        @include flex(row, nowrap, flex-start, stretch, stretch);
-    }
-
+     
     &__item {
-        width: 25%;
-        min-width: 351px;
         @extend %animation;
 
         &:nth-child(2n+1) {
@@ -53,7 +47,9 @@
 
     &__preview {
         width: 100%;
-        height: 484.1px;
+        height: 484.1px; 
+        object-fit: cover; 
+        object-position: center;
     }
 
     &__btn {
