@@ -35,6 +35,10 @@
         }
     }
 
+    &__navbar-collapse {
+        @extend %animation;
+    }
+
     .content {
         @include flex(row, wrap, space-between, flex-start, space-between);
     }
