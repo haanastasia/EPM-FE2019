@@ -1,8 +1,7 @@
 .advantage {
-    @include flex(row, wrap, space-between, stretch, stretch);
 
     &__item {
-        width: 160px;
+        max-width: 160px;
     }
 
     &__icon {
@@ -39,6 +38,29 @@
         &:hover {
             background-color: $primary-color-active;
             color: #ffffff;  
+        }
+    }
+}
+
+@media (max-width: $sm)  {
+
+    .advantage {
+
+        &__item {
+            max-width: 90%;
+            margin: 0 auto 30px;
+        }
+
+        &__icon {
+            margin: 0 auto 15px;
+        }
+
+        &__title {
+            margin: 0 0 5px;
+        }
+
+        &__text {
+            margin-bottom: 15px;
         }
     }
 }
