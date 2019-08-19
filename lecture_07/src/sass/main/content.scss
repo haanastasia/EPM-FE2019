@@ -9,6 +9,14 @@ body {
     margin: 0 auto;    
 }
 
+a {
+    
+    &:hover {
+        color: initial;
+        text-decoration: none;
+    }
+}
+
 .content {
     max-width: 694px;    
     margin: 0 auto;

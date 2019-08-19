@@ -19,10 +19,6 @@
         text-align: left;
         text-transform: uppercase;
         color: #fff;
-
-        &:hover + .cat-rocket {
-            opacity: 1;
-        }
     }
 
     &__navbar-toggler {
@@ -73,10 +69,11 @@
         &__navbar-collapse {
             position: fixed;
             width: 100vw;
-            height: 100vh;
+            height: 100vh;    
+            min-height: 300px;
             top: 0px;
             left: 0px;
-            padding: 40px;
+            padding: 0px 40px;
             background: rgba(0, 0, 0, 0.83);    
             z-index: 1;
 
@@ -101,11 +98,20 @@
 }
 
 @media (max-width: $sm)  {
-
+    
     .header {
+        padding: 21px 0;
 
         &__navbar-toggler {
             right: 15px;
+            top: 20px;
+        }
+
+        &__navbar-collapse {
+
+            .nav__link {
+                font-size: 14px;    
+            }
         }
     }
 }

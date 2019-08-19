@@ -27,3 +27,18 @@
         font-size: 9.9px;
     }
 }
+
+@media (max-width: $sm)  {
+
+    .btn {
+        padding: 11px 17px 10px;
+
+        &--middle {
+            padding: 11px 20px 11px 20px;
+        }
+
+        &--mini {
+            padding: 5px 27px;
+        }
+    }
+}

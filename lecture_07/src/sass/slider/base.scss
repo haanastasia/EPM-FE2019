@@ -29,3 +29,13 @@
         @include flex(row, wrap, flex-start, flex-start, flex-start);
     }
 }
+
+@media (max-width: $sm)  {
+
+    .slider {
+
+        &__dots {
+            bottom: 20px;
+        }
+    }
+}

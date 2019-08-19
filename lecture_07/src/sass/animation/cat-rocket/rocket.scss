@@ -9,3 +9,10 @@
     top: 280px;
     left: 450px;
 }
+
+@media (max-width: $md)  {
+    
+    .rocket {
+        display: none;
+    }
+}

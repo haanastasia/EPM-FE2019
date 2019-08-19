@@ -1,9 +1,5 @@
 .stars {
-    list-style: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;    
+    list-style: none;    
   
     @for $i from 1 through 130 {
         $counter: 50*$i;

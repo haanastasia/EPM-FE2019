@@ -8,10 +8,10 @@
 
 .cat-rocket {
     position: absolute;
-    opacity: 0;    
-    z-index: -1;    
+    opacity: 0;     
     width: 98vw;
     height: 100vh;
+    min-height: 692px;
     overflow: hidden;
     top: 0px;
     left: 50%;
