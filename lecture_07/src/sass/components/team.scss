@@ -1,5 +1,5 @@
 .team {
-    padding: 69px 0px 137px;
+    padding: 69px 0px 87px;
 
     &__col {
         width: 100%;
@@ -11,7 +11,8 @@
     }
 
     &__item {
-        width: 172.3px;
+        max-width: 172.3px;    
+        margin: 0 auto 50px;
 
         &:hover {
             .team__preview:after {
@@ -105,5 +106,12 @@
         &:hover {
             @include rotate(360deg);
         }
+    }
+}
+
+@media (max-width: $md)  {
+    
+    .team {
+        padding: 40px 0px 0px;
     }
 }

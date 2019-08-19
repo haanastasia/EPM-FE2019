@@ -46,3 +46,14 @@
         }
     }
 }
+
+@media (max-width: $lg)  {
+
+    .gallery {
+    
+        &__thumbnails {
+            width: calc(100% - 70px);
+            overflow: hidden;
+        }
+    }
+}

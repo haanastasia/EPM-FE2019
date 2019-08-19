@@ -2,33 +2,32 @@
     padding-top: 65px; 
 
     &__col {
-        margin: 0px 0px 88px;
+        margin-bottom: 88px;
     }
     
-    &__item {
-        width: 206px;   
+    &__item {     
+        max-width: 230px;
         background: white;
         @extend %slow-animation;  
 
         &:focus {
-            transform: scale(1.1) translate(-108%,0);    
             outline: 1px solid $primary-color;    
             position: relative;
             z-index: 1;
         }
 
         &:nth-child(1):focus {
-            transform: scale(1.1) translate(108%,0);
+            transform: scale(1.1) translate(88%,0);
         }
 
         &:nth-child(2):focus {
             transform: scale(1.1) translate(0,0);
         }
 
-        &:nth-child(31):focus {
-            transform: scale(1.1) translate(-108%,0);
+        &:nth-child(3):focus {
+            transform: scale(1.1) translate(-88%,0);
         }
-     }
+    }
     
     &__title {
         font-family: $font-stack;  
@@ -71,6 +70,58 @@
 
         &:hover {
             background-color: $primary-color;
+        }
+    }
+}
+
+@media (max-width: $lg)  {
+
+    .blog {
+
+        &__col {
+            margin-bottom: 10px;
+        }
+
+        &__item {       
+            margin-bottom: 30px;
+    
+            &:nth-child(1):focus {
+                transform: none;
+            }
+    
+            &:nth-child(2):focus {
+                transform: none;
+            }
+    
+            &:nth-child(3):focus {
+                transform: none;
+            }
+        }
+    }
+}
+
+@media (max-width: $md)  {
+
+    .blog {
+        padding-top: 40px; 
+
+        &__preview {
+            margin-bottom: 15px;
+        }
+
+        &__title {
+            font-size: 13px;
+            width: 100%;
+            margin: 0 auto 5px;
+        }
+
+        &__date {
+            margin-bottom: 5px;
+        }
+
+        &__text {
+            margin: 0 0 15px;
+            font-size: 12px;
         }
     }
 }

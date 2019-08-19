@@ -56,3 +56,14 @@
         background-color: #ffffff;    
     }
 }
+
+@media (max-width: $md)  {
+
+    .projects {
+        padding: 40px 0px 0px;
+    
+        &__info {
+            padding: 30px 21px 31px 34px;    
+        }
+    }
+}
