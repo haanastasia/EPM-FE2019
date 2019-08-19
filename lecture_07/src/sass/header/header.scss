@@ -99,3 +99,13 @@
         }
     }
 }
+
+@media (max-width: $sm)  {
+
+    .header {
+
+        &__navbar-toggler {
+            right: 15px;
+        }
+    }
+}
