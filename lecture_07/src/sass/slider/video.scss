@@ -1,9 +1,9 @@
 .video-slider {
+    width: 156%;
+    margin-left: -28%;
 
     &__item {
-        width: 690px;
-        margin: 0px 18px;    
-        float: left;
+        max-width: 690px;
     }
 
     &__info {
@@ -63,7 +63,7 @@
     &__image {
         width: 690px;
         height: 461px; 
-        -o-object-fit: cover; 
+        max-width: 100%;
         object-fit: cover; 
         object-position: center;
     }
