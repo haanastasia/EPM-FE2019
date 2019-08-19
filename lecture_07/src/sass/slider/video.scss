@@ -98,11 +98,16 @@
     .video-slider {
 
         &__preview {
-            height: 300px;
+            height: 250px;
         }
         
+        &__play {
+            width: 100px;
+            margin-left: -50px;
+        }
+
         &__image {
-            height: 300px;
+            height: 250px;
         }
     }
 }
