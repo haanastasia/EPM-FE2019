@@ -19,6 +19,13 @@
             padding: 30px;
 
         }
+
+        &__map {
+
+            ymaps {
+                max-height: 250px;
+            }
+        }
     }
 }
 
