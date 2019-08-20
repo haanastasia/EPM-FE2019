@@ -65,5 +65,9 @@
         &__info {
             padding: 30px 21px 31px 34px;    
         }
+
+        &__preview {
+            max-height: 300px;
+        }
     }
 }
