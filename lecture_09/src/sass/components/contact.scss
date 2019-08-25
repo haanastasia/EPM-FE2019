@@ -1,0 +1,45 @@
+.contact {
+
+    &__info {
+        padding: 41px 48.4px 52px;
+        background-color: $primary-color;
+    }
+
+    &__form {
+        width: 311px;    
+    }
+}
+
+
+@media (max-width: $md)  {
+
+    .contact {
+    
+        &__info {
+            padding: 30px;
+
+        }
+
+        &__map {
+
+            ymaps {
+                max-height: 250px;
+            }
+        }
+    }
+}
+
+@media (max-width: $sm)  {
+
+    .contact {
+    
+        &__info {
+            padding: 20px;
+
+        }
+
+        &__form {
+            width: 100%;    
+        }
+    }
+}

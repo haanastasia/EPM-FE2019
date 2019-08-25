@@ -1,0 +1,73 @@
+.projects {
+    padding: 47px 0px 0px;
+     
+    &__item {
+        @extend %animation;
+
+        &:nth-child(2n+1) {
+            background-color: $second-color;
+        }
+
+        &:nth-child(2n) {
+            background-color: #e4e4e4;
+        }
+
+        &:hover {
+            background-color: $primary-color;
+
+            .projects__btn {
+                background-color: $primary-color-active;
+                color: #ffffff;
+            }
+        }
+    }
+
+    &__info {
+        padding: 40px 31px 41px 44px;    
+        min-height: 156px;
+    }
+
+    &__name {
+        font-family: $font-stack;
+        font-size: 14.5px;
+        font-weight: bold;
+        margin-bottom: 9px;
+        color: $main-color-family;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        font-family: Helvetica;
+        font-size: 13.5px;
+        line-height: 1.74;
+        color: rgba(4, 4, 5, 0.5);
+        margin-bottom: 14px;    
+        letter-spacing: -0.1px;
+    }
+
+    &__preview {
+        width: 100%;
+        height: 484.1px; 
+        object-fit: cover; 
+        object-position: center;
+    }
+
+    &__btn {
+        background-color: #ffffff;    
+    }
+}
+
+@media (max-width: $md)  {
+
+    .projects {
+        padding: 40px 0px 0px;
+    
+        &__info {
+            padding: 30px 21px 31px 34px;    
+        }
+
+        &__preview {
+            max-height: 300px;
+        }
+    }
+}
