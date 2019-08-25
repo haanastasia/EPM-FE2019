@@ -1,3 +1,7 @@
+'use strict';
+
+import './blog/main';
+
 import 'bootstrap';
 
 import '../sass/styles.scss';
