@@ -1,34 +1,19 @@
-// функция экранирования символов
-function escape(string) {
-    var htmlEscapes = {
-        '&': '&amp;',
-        '<': '&lt;',
-        '>': '&gt;',
-        '"': '&quot;',
-        "'": '&#39;'
-    };
+import { escape, getRand, getAvg } from './helpers'; // вспомогательные функции 
 
-    return string.replace(/[&<>"']/g, function(match) {
-        return htmlEscapes[match];
-    });
-};
-
-function getRand(max) {
-    return Math.floor(Math.random() * max)+1;
-}
-
-Array.prototype.shuffle = function(b){
+// перемешиваем массив
+Array.prototype.shuffle = function (b) {
     var i = this.length, j, t;
-    while(i) {
-        j = Math.floor( ( i-- ) * Math.random() );
-        t = b && typeof this[i].shuffle!=='undefined' ? this[i].shuffle() : this[i];
+    while (i) {
+        j = Math.floor((i--) * Math.random());
+        t = b && typeof this[i].shuffle !== 'undefined' ? this[i].shuffle() : this[i];
         this[i] = this[j];
         this[j] = t;
     }
     return this;
 };
 
-Array.prototype.rand = function() {
+// создаем массив из рандомных элементов другого массива
+Array.prototype.rand = function () {
     this.shuffle();
     var lengthRand = getRand(this.length);
     if (lengthRand > 20) {
@@ -37,74 +22,63 @@ Array.prototype.rand = function() {
     return Array.from({ length: lengthRand }, (а, b) => this[b]);
 }
 
+// заполняем массив теги
 var topics = ['design', 'seo', 'video', 'css', 'html', 'javascript', 'ecmascript', 'angular',
     'react', 'nodejs', 'photoshop', 'social', 'programming', 'marketing', 'business', 'humor',
     'promotion', 'art', 'creative', 'technology', 'style', 'photo', 'animation', 'brand'];
 
+// заполняем массив новостей. 
+// сначала мы заполняем вручную каждый элемент, чтобы протестировать экранирование символов.
 var itemBlog = [
     {
         id: 1,
-        rating: Array.from({ length: 10 }, () => getRand(1000)),
+        rating: Array.from({ length: 10 }, () => getRand(1000)), // заполняем массив, в котором 10 рандомных элементов от 0 до 1000
         topics: topics.rand(),
-        title: escape('Заголовок 1')
+        title: escape('Headline > 1')
     },
     {
         id: 2,
         rating: Array.from({ length: 10 }, () => getRand(1000)),
         topics: topics.rand(),
-        title: 'Заголовок 2'
+        title: escape('Headline & headline')
     },
     {
         id: 3,
         rating: Array.from({ length: 10 }, () => getRand(1000)),
         topics: topics.rand(),
-        title: 'Заголовок 3'
-    },
-    {
-        id: 4,
-        rating: Array.from({ length: 10 }, () => getRand(1000)),
-        topics: topics.rand(),
-        title: 'Заголовок 4'
-    },
-    {
-        id: 5,
-        rating: Array.from({ length: 10 }, () => getRand(1000)),
-        topics: topics.rand(),
-        title: 'Заголовок 5'
-    },
-    {
-        id: 6,
-        rating: Array.from({ length: 10 }, () => getRand(1000)),
-        topics: topics.rand(),
-        title: 'Заголовок 6'
-    },
-    {
-        id: 7,
-        rating: Array.from({ length: 10 }, () => getRand(1000)),
-        topics: topics.rand(),
-        title: 'Заголовок 7'
+        title: escape('Headline "Headline"')
     }
 ];
 
-function getAvg(grades) {
-    const total = grades.reduce((acc, c) => acc + c, 0) / grades.length;
-    return total / 10;
-}
-  
+// затем заполняем оставшиеся 27 элементов новостей через цикл
+let j = 4;
+do {
+    itemBlog.push({
+        id: j,
+        rating: Array.from({ length: 10 }, () => getRand(1000)),
+        topics: topics.rand(),
+        title: 'Headline ' + j
+    });
+    j++;
+} while (j <= 30);
+
+// сортируем массив по рейтингу по убыванию
 itemBlog.sort((a, b) => getAvg(b.rating) - getAvg(a.rating));
 
+// выводим массив в консоль для тестирования и проверки
 console.log(itemBlog);
 
-
+// выводим первые три элемента массива на экран
 let i = 0;
-while (i < 3) { 
-    document.querySelectorAll('.blog__title')[i].innerHTML = itemBlog[i].title;
-    itemBlog[i].topics.forEach(function(entry) {
-        document.querySelectorAll('.blog__tags')[i].insertAdjacentHTML('beforeEnd', '<div class="blog-tags__item">' + entry + '</div>');
+while (i < 3) {
+    // ищем контейнер для отдельной статьи
+    var item = document.querySelectorAll('.blog__item')[i];
+
+    item.querySelector('.blog__title').innerHTML = itemBlog[i].title; // выполняем поиск элементов по классу в контейнере item и заполняем его
+    itemBlog[i].topics.forEach(function (entry) {
+        item.querySelector('.blog__tags').insertAdjacentHTML('beforeEnd', '<div class="blog-tags__item">' + entry + '</div>');
     });
     var rating = getAvg(itemBlog[i].rating).toFixed(2);
-    document.querySelectorAll('.blog__rating')[i].innerHTML = '<progress max="100" value="' + rating +'" class="rating__progress"></progress><div class="rating__value" style="width:' + rating +'%" data-value="' + rating +'"></div>';
+    item.querySelector('.blog__rating').innerHTML = '<progress max="100" value="' + rating + '" class="rating__progress"></progress><div class="rating__value" style="width:' + rating + '%" data-value="' + rating + '"></div>';
     i++;
 }
-
- 
