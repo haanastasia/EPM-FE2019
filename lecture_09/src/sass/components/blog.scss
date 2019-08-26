@@ -8,12 +8,12 @@
     &__item {     
         max-width: 230px;
         background: white;
+        position: relative;
         @extend %slow-animation;  
 
         &:focus {
             outline: 1px solid $primary-color;    
-            position: relative;
-            z-index: 1;
+            z-index: 2;
         }
 
         &:nth-child(1):focus {
@@ -35,7 +35,7 @@
         font-weight: bold;
         color: $main-color-family;    
         width: 169px;
-        margin: 0px auto 16px;
+        margin: 0px auto 10px;
         text-transform: uppercase;
     }
 
@@ -62,7 +62,7 @@
         font-size: 13.5px;
         line-height: 1.74;
         color: $main-color-family;    
-        margin: 0px 0 28px;
+        margin: 0px 0 20px;
     }
 
     &__btn {
@@ -72,6 +72,22 @@
             background-color: $primary-color;
         }
     }
+
+    &-tags {
+        @include flex(row, wrap, center, center, flex-start);    
+        margin-bottom: 20px;    
+        min-height: 107px;
+        
+        &__item {
+            padding: 0 6px 3px;
+            background: $primary-color-active;
+            color: #fff;
+            border-radius: 10px;
+            margin: 2px 1px;
+            font-size: 10px;
+        }
+    }
+
 }
 
 @media (max-width: $lg)  {
