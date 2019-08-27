@@ -2,18 +2,18 @@ import { escape, getRand, getAvg, rand } from './helpers'; // вспомогат
 import { fillPostsData } from './fill'; // функция для вывода новостей
 
 const MAX_TAGS = 20; // максимальное кол-во тегов в статье
-const MAX_RATING= 10; // максимальное кол-во оценок в рейтинге
+const MAX_RATING = 10; // максимальное кол-во оценок в рейтинге
 const MAX_ITEMS = 30; // максимальное кол-во статей в блоге
 const AMOUNT_FEED = 3; // кол-во статей отображаемых в ленте новостей
 
 // заполняем массив теги
-var topics = ['design', 'seo', 'video', 'css', 'html', 'javascript', 'ecmascript', 'angular',
+let topics = ['design', 'seo', 'video', 'css', 'html', 'javascript', 'ecmascript', 'angular',
     'react', 'nodejs', 'photoshop', 'social', 'programming', 'marketing', 'business', 'humor',
     'promotion', 'art', 'creative', 'technology', 'style', 'photo', 'animation', 'brand'];
 
 // заполняем массив новостей. 
 // сначала мы заполняем вручную каждый элемент, чтобы протестировать экранирование символов.
-var itemBlog = [
+let itemBlog = [
     {
         id: 1,
         rating: Array.from({ length: MAX_RATING }, () => getRand(1001, 0)), // заполняем массив, в котором 10 рандомных элементов от 0 до 1000
