@@ -18,7 +18,7 @@ let itemBlog = [
         id: 1,
         rating: Array.from({ length: MAX_RATING }, () => getRand(1001, 0)), // заполняем массив, в котором 10 рандомных элементов от 0 до 1000
         topics: rand(topics, MAX_TAGS), // создаем массив из рандомных тегов в рандомном порядке, устанавливаем макс. длину массива
-        title: escape('Headline > 1') // экранирование для заголовков
+        title: escape('Headline $ 1') // экранирование для заголовков
     },
     {
         id: 2,
@@ -30,7 +30,7 @@ let itemBlog = [
         id: 3,
         rating: Array.from({ length: MAX_RATING }, () => getRand(1001, 0)),
         topics: rand(topics, MAX_TAGS),
-        title: escape('Headline "Headline"')
+        title: escape('Headline + "Headline"')
     }
 ];
 
