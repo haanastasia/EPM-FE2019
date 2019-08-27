@@ -1,14 +1,9 @@
-import { escape, getRand, getAvg, shuffle } from './helpers'; // вспомогательные функции 
+import { escape, getRand, getAvg, shuffle, rand } from './helpers'; // вспомогательные функции 
 
-// создаем массив из рандомных элементов другого массива
-Array.prototype.rand = function () {
-    shuffle(this);
-    var lengthRand = getRand(this.length);
-    if (lengthRand > 20) {
-        lengthRand = getRand(20);
-    }
-    return Array.from({ length: lengthRand }, (а, b) => this[b]);
-}
+let maxTags = 20; // максимальное кол-во тегов в статье
+let maxRating = 10; // максимальное кол-во оценок в рейтинге
+let maxItems = 30; // максимальное кол-во статей в блоге
+let amountFeed = 3; // кол-во статей отображаемых в ленте новостей
 
 // заполняем массив теги
 var topics = ['design', 'seo', 'video', 'css', 'html', 'javascript', 'ecmascript', 'angular',
@@ -20,20 +15,20 @@ var topics = ['design', 'seo', 'video', 'css', 'html', 'javascript', 'ecmascript
 var itemBlog = [
     {
         id: 1,
-        rating: Array.from({ length: 10 }, () => getRand(1000)), // заполняем массив, в котором 10 рандомных элементов от 0 до 1000
-        topics: topics.rand(),
+        rating: Array.from({ length: maxRating }, () => getRand(1000, 0)), // заполняем массив, в котором 10 рандомных элементов от 0 до 1000
+        topics: rand(topics, maxTags),
         title: escape('Headline > 1')
     },
     {
         id: 2,
-        rating: Array.from({ length: 10 }, () => getRand(1000)),
-        topics: topics.rand(),
+        rating: Array.from({ length: maxRating }, () => getRand(1000, 0)),
+        topics: rand(topics, maxTags),
         title: escape('Headline & headline')
     },
     {
         id: 3,
-        rating: Array.from({ length: 10 }, () => getRand(1000)),
-        topics: topics.rand(),
+        rating: Array.from({ length: maxRating }, () => getRand(1000, 0)),
+        topics: rand(topics, maxTags),
         title: escape('Headline "Headline"')
     }
 ];
@@ -43,12 +38,12 @@ let j = itemBlog.length + 1;
 do {
     itemBlog.push({
         id: j,
-        rating: Array.from({ length: 10 }, () => getRand(1000)),
-        topics: topics.rand(),
+        rating: Array.from({ length: maxRating }, () => getRand(1000, 0)),
+        topics: rand(topics, maxTags),
         title: 'Headline ' + j
     });
     j++;
-} while (j <= 30);
+} while (j <= maxItems);
 
 // сортируем массив по рейтингу по убыванию
 itemBlog.sort((a, b) => getAvg(b.rating) - getAvg(a.rating));
@@ -58,7 +53,7 @@ console.log(itemBlog);
 
 // выводим первые три элемента массива на экран
 let i = 0;
-while (i < 3) {
+while (i < amountFeed) {
     // ищем контейнер для отдельной статьи
     var item = document.querySelectorAll('.blog__item')[i];
 

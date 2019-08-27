@@ -8,14 +8,14 @@ export function escape(string) {
         "'": '&#39;'
     };
 
-    return string.replace(/[&<>"']/g, function(match) {
+    return string.replace(/[&<>"']/g, function (match) {
         return htmlEscapes[match];
     });
-};
+}
 
 // функция рандомного числа
-export function getRand(max) {
-    return Math.floor(Math.random() * max)+1;
+export function getRand(max, min) {
+    return Math.floor(Math.random() * max) + min;
 }
 
 // вычисляем среднее арифметическое в массиве
@@ -35,4 +35,14 @@ export function shuffle(array) {
         i--;
     } while (i > 0);
     return array;
+}
+
+// создаем массив из рандомных элементов другого массива
+export function rand(array, max) {
+    shuffle(array);
+    var lengthRand = getRand(array.length, 1);
+    if (lengthRand > max) {
+        lengthRand = getRand(max, 1);
+    }
+    return Array.from({ length: lengthRand }, (а, b) => array[b]);
 }
