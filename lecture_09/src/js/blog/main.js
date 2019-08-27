@@ -1,20 +1,8 @@
-import { escape, getRand, getAvg } from './helpers'; // вспомогательные функции 
-
-// перемешиваем массив
-Array.prototype.shuffle = function (b) {
-    var i = this.length, j, t;
-    while (i) {
-        j = Math.floor((i--) * Math.random());
-        t = b && typeof this[i].shuffle !== 'undefined' ? this[i].shuffle() : this[i];
-        this[i] = this[j];
-        this[j] = t;
-    }
-    return this;
-};
+import { escape, getRand, getAvg, shuffle } from './helpers'; // вспомогательные функции 
 
 // создаем массив из рандомных элементов другого массива
 Array.prototype.rand = function () {
-    this.shuffle();
+    shuffle(this);
     var lengthRand = getRand(this.length);
     if (lengthRand > 20) {
         lengthRand = getRand(20);
@@ -51,7 +39,7 @@ var itemBlog = [
 ];
 
 // затем заполняем оставшиеся 27 элементов новостей через цикл
-let j = 4;
+let j = itemBlog.length + 1;
 do {
     itemBlog.push({
         id: j,
