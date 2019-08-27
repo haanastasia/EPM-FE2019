@@ -1,4 +1,4 @@
-import { escape, getRand, getAvg, shuffle, rand } from './helpers'; // вспомогательные функции 
+import { escape, getRand, getAvg, rand } from './helpers'; // вспомогательные функции 
 
 let maxTags = 20; // максимальное кол-во тегов в статье
 let maxRating = 10; // максимальное кол-во оценок в рейтинге
@@ -16,8 +16,8 @@ var itemBlog = [
     {
         id: 1,
         rating: Array.from({ length: maxRating }, () => getRand(1000, 0)), // заполняем массив, в котором 10 рандомных элементов от 0 до 1000
-        topics: rand(topics, maxTags),
-        title: escape('Headline > 1')
+        topics: rand(topics, maxTags), // создаем массив из рандомных тегов в рандомном порядке, устанавливаем макс. длину массива
+        title: escape('Headline > 1') // экранирование для заголовков
     },
     {
         id: 2,
@@ -61,7 +61,7 @@ while (i < amountFeed) {
     itemBlog[i].topics.forEach(function (entry) {
         item.querySelector('.blog__tags').insertAdjacentHTML('beforeEnd', '<div class="blog-tags__item">' + entry + '</div>');
     });
-    var rating = getAvg(itemBlog[i].rating).toFixed(2);
+    var rating = getAvg(itemBlog[i].rating).toFixed(2); // находим среднее арифметическое из массива рейтинга, округляем его до сотых, убираем лишние цифры после запятой. 
     item.querySelector('.blog__rating').innerHTML = '<progress max="100" value="' + rating + '" class="rating__progress"></progress><div class="rating__value" style="width:' + rating + '%" data-value="' + rating + '"></div>';
     i++;
 }
