@@ -1,0 +1,33 @@
+$primary-color:        #ffe26d;
+$primary-color-active: #62497c;
+$main-color-family:    #040405;
+$second-color:         #efefef;
+$font-stack:             Montserrat;
+$sm:                     576px;
+$md:                     768px;
+$lg:                     992px;
+
+@mixin flex($direction, $wrap, $content, $items, $align-content) {
+    display: flex; 
+	flex-direction: $direction;
+	flex-wrap: $wrap;
+	justify-content: $content;
+	align-items: $items;
+	align-content: $align-content;
+}
+
+@mixin rotate($var) {
+	transform: rotate($var);
+}
+
+%animation {
+	transition: all 350ms ease-in-out;
+}
+
+%slow-animation {
+	transition: all 650ms ease-out;
+}
+
+%scale {
+    transform: scale(1.2);
+}

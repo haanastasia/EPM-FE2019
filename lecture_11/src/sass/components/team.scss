@@ -1,0 +1,118 @@
+.team {
+    padding: 69px 0px 87px;
+
+    &__col {
+        width: 100%;
+        margin-bottom: 61.1px;
+
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+
+    &__item {
+        max-width: 172.3px;    
+        margin: 0 auto 50px;
+
+        &:hover {
+            .team__preview:after {
+                height: 172.4px;
+                width: 172.3px;
+            }
+
+            .team__image {
+                opacity: 0.3;
+            }
+
+            .team__social { 
+                opacity: 1;
+            }
+        }
+    }
+
+    &__name {
+        font-family: $font-stack;
+        font-size: 14.5px;
+        font-weight: bold;
+        color: $main-color-family;
+        text-transform: uppercase;
+        margin: 0px 0px 11px;
+    }
+
+    &__job {
+        font-family: $font-stack;
+        font-size: 14.5px;
+        color: rgba(4, 4, 5, 0.39);
+    }
+
+    &__preview {
+        border-radius: 50%;
+        overflow: hidden;
+        height: 172.4px;   
+        margin-bottom: 28px; 
+        position: relative;
+
+        &:after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-color: $primary-color-active;
+            position: absolute;
+            height: 0px;
+            width: 0px;
+            z-index: -1;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            border-radius: 50%;
+            @extend %animation;
+        }
+    }
+
+    &__image {
+        max-width: 100%;
+        @extend %animation;
+    }
+
+    &__social {
+        position: absolute;
+        top: 55px;
+        width: 100%;
+        @extend %animation;
+        opacity: 0;
+    }
+
+    &__social-link {
+        color: white;
+        font-size: 33px;
+        text-decoration: none;
+        display: inline-block;
+        min-width: 30px;
+        @extend %animation;    
+
+        &--twitter {
+            font-size: 41px;
+            margin-left: 8px;
+            margin-right: 12px;
+        }
+
+        &--facebook {
+            margin-left: 19px;
+            margin-right: 2px;
+        }
+
+        &:hover {
+            @include rotate(360deg);
+            color: $primary-color;
+        }
+    }
+}
+
+@media (max-width: $md)  {
+    
+    .team {
+        padding: 40px 0px 0px;
+    }
+}
