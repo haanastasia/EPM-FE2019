@@ -11,9 +11,7 @@ const AMOUNT_FEED = 3; // кол-во статей отображаемых в �
 function Blog(items, length) { 
 
     FillPostsData.call(this);
-
     this.itemBlog = items;
-
     // сортируем массив по рейтингу по убыванию
     this.itemBlog.sort((a, b) => getAvg(b.rating) - getAvg(a.rating));
 }
@@ -39,15 +37,14 @@ Blog.prototype.render = function(selector, count) {
         let contentRating = this.buildText('div', 'blog__rating rating', '');
         let rating = getAvg(this.itemBlog[i].rating).toFixed(2); // находим среднее арифметическое из массива рейтинга, округляем его до сотых, убираем лишние цифры после запятой. 
         contentRating.innerHTML = '<progress max="100" value="' + rating + '" class="rating__progress"></progress><div class="rating__value" style="width:' + rating + '%" data-value="' + rating + '"></div>';
-        // дальше идут элементы с фиксированными значениями
         // создаем элемент для кнопки
         let contentBtn = this.buildText('div', "btn btn--middle blog__btn", "read more");
         // создаем элемент для даты
-        let contentDate = this.buildText('div', 'blog__date', '15 Jan, 2015'); 
+        let contentDate = this.buildText('div', 'blog__date', this.itemBlog[i].date); 
         // создаем элемент для описания
-        let contentText = this.buildText('p', "blog__text", "Lorem ipsum dolor sit amet, con&shy;sectetur adipiscing elit. Pellen&shy;tesque vel odio vel felis placerat pharetra ut vitae felis.");
+        let contentText = this.buildText('p', "blog__text", this.itemBlog[i].text);
         // создаем элемент для изображения
-        let contentPreview = this.buildImg('blog__preview', 'img/blog1.png', 'Blog');
+        let contentPreview = this.buildImg('blog__preview', this.itemBlog[i].photo, 'Blog');
         // заполняем нашими элементами контейнер статьи
         item.append(contentPreview, contentTitle, contentRating, contentDate, contentText, contentTags, contentBtn);
         
@@ -64,13 +61,13 @@ xhr.send(); // (1)
 xhr.onreadystatechange = function() { // (3)
   if (xhr.readyState != 4) return;
   if (xhr.status != 200) {
-    console.log(xhr.status + ': ' + xhr.statusText);
+    //console.log(xhr.status + ': ' + xhr.statusText);
   } else {
-    console.log(xhr.responseText);
-
-    let news = new Blog(xhr.responseText, MAX_ITEMS);
+    //console.log(xhr.responseText);
+     
+    let news = new Blog(JSON.parse(xhr.responseText), MAX_ITEMS);
     // выводим массив в консоль для тестирования и проверки
-    console.log(news.itemBlog);
+    //console.log(news.itemBlog);
 
     news.render('.blog__col', AMOUNT_FEED);
     news.render('.blog__col-2', AMOUNT_FEED);
