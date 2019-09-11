@@ -1,6 +1,6 @@
 {
   "posts": [
-    {"id":0,"title":"Headline 1","rating":[600,555,653,343,654,790,724,553,862,476],"topics":["design","seo","video","css"],"date":"15 Jan,2019","text":"Lorem ipsum dolor sit amet,con­sectetur adipiscing elit. Pellen­tesque vel odio vel felis placerat pharetra ut vitae felis.","photo":"img/blog1.png"},
+    { "id": 0, "title": "Headline 1", "rating": [600,555,653,343,654,790,724,553,862,476], "topics": ["design","seo","video","css"] },
     { "id": 2, "title": "Post 2" },
     { "id": 3, "title": "Post 3" },
     { "id": 4, "title": "Post 4" },
