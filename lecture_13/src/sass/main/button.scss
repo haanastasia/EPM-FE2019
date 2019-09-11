@@ -1,0 +1,44 @@
+.btn {
+    font-family: $font-stack;  
+    border-radius: 2.9px;    
+    padding: 14px 26px 13px 26px;
+    display: inline-block;
+    text-transform: uppercase;  
+    font-size: 10.3px;
+    font-weight: bold; 
+    cursor: pointer;
+    border:: 0px;
+    text-decoration: none;
+    @extend %animation;
+
+    &--square {
+        border-radius: 0px;
+    }
+
+    &--middle {
+        padding: 13px 25px 15px 23px;
+    }
+
+    &--mini {
+        padding: 8px 29px 8px 29px;
+    }
+
+    &--size-middle {
+        font-size: 9.9px;
+    }
+}
+
+@media (max-width: $sm)  {
+
+    .btn {
+        padding: 11px 17px 10px;
+
+        &--middle {
+            padding: 11px 20px 11px 20px;
+        }
+
+        &--mini {
+            padding: 5px 27px;
+        }
+    }
+}

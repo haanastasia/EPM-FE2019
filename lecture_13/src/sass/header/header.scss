@@ -1,0 +1,124 @@
+.header {
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    top: 0px;    
+    z-index: 2;
+    padding: 41px 0px;
+
+    &__nav {
+        padding: 0px;
+    }
+
+    &__logo {
+        font-family: $font-stack;
+        font-size: 26.5px;
+        font-weight: 700;
+        line-height: .8;
+        letter-spacing: -2.1px;
+        text-align: left;
+        text-transform: uppercase;
+        color: #fff;
+    }
+
+    &__navbar-toggler {
+        color: white;
+        position: fixed;
+        right: 35px;
+        top: 30px;
+        background: rgba(0, 0, 0, 0.28);
+        padding: 10px 15px;
+        z-index: 2;
+
+        .fa {
+            width: 13px;
+        }
+    }
+
+    &__navbar-collapse {
+        @extend %animation;
+    }
+
+    .content {
+        @include flex(row, wrap, space-between, flex-start, space-between);
+    }
+}
+
+@media (max-width: $md)  {
+
+    .header {
+
+        &__navbar-toggler {
+
+            .fa-times {
+                display: block;
+            }
+
+            .fa-bars {
+                display: none;
+            }
+
+            &.collapsed {
+
+                .fa-times {
+                    display: none;
+                }
+
+                .fa-bars {
+                    display: block;
+                }
+            }
+        }
+
+        &__navbar-collapse {
+            position: fixed;
+            width: 100vw;
+            top: 0px;
+            left: 0px;
+            background: rgba(0, 0, 0, 0.83);    
+            z-index: 1;    
+            overflow: hidden;
+
+            &.show {
+                height: 100vh;
+                min-height: 300px;
+            }
+
+            .nav__list {
+                margin: 0px;
+                max-width: 100%;
+                @include flex(column, nowrap, center, center, center);
+                width: 100%;
+                height: 100%;
+            }
+
+            .nav__item {
+                margin: 0px;
+            }
+
+            .nav__link {
+                font-size: 16px;    
+                padding: 10px 50px;
+            }
+        }
+    }
+}
+
+@media (max-width: $sm)  {
+    
+    .header {
+        padding: 27px 0;
+
+        &__navbar-toggler {
+            right: 15px;
+            top: 20px;
+        }
+
+        &__navbar-collapse {
+
+            .nav__link {
+                font-size: 14px;    
+            }
+        }
+    }
+}

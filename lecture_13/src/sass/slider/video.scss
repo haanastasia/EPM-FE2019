@@ -1,0 +1,114 @@
+.video-slider {
+    width: 150%;
+    margin-left: -75%;
+    left: 50%;
+
+    &__info {
+        @include flex(row, wrap, space-between, flex-start, flex-start);
+        font-family: $font-stack;
+        font-weight: bold;
+        color: #fefefe;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        letter-spacing: -.5px;        
+        font-size: 10.6px;
+    }
+
+    &__time {
+        font-size: 10.6px;
+    }
+
+    &__preview {
+        position: relative;
+        height: 461px;
+        margin-bottom: 23px;
+
+        &:hover:before {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+         
+        &:before {
+            @extend %animation;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0px;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__play {
+        width: 121px;
+        position: absolute;
+        left: 50%;
+        margin-left: -60.5px;
+        top: 32%;
+        cursor: pointer;
+
+        &:focus {
+            outline: none;
+            animation: pulse 1s ease-in-out infinite; 
+        }
+    }
+
+    &__image {
+        width: 690px;
+        height: 461px; 
+        max-width: 100%;
+        object-fit: cover; 
+        object-position: center;
+    }
+}
+
+@media (max-width: $md)  {
+
+    .video-slider {
+        width: 100%;
+        left: 0;
+        margin: 0px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+
+        &__item {
+            min-width: 100%;
+        }
+
+        &__preview {
+            height: 350px;
+        }
+
+        &__play {
+            top: 29%;
+        }
+        
+        &__image {
+            width: 100%;
+            height: 350px;
+        }
+    }
+}
+
+@media (max-width: $sm)  {
+
+    .video-slider {
+
+        &__preview {
+            height: 250px;
+        }
+        
+        &__play {
+            width: 100px;
+            margin-left: -50px;
+        }
+
+        &__image {
+            height: 250px;
+        }
+    }
+}

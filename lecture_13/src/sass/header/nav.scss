@@ -1,0 +1,39 @@
+.nav {
+
+    &__item {
+        margin-right: 33px;
+
+        &:last-child {
+            margin-right: 0px;
+        }
+    }
+
+    &__list {
+        list-style: none;	
+        @include flex(row, wrap, flex-start, flex-start, flex-start); 
+        max-width: 570px;    
+        margin-bottom: 0px;
+        margin-top: -2px;
+    }
+
+    &__link {
+        display: inline-block;
+        text-transform: uppercase;
+        font-family: Montserrat;
+        font-size: 10.5px;
+        font-weight: bold;
+        color: #ffffff;   
+        padding: 10px 0px 10px;
+        @extend %animation;
+
+        &--active {
+            color: $primary-color;
+        }
+
+        &:hover {
+            color: $primary-color;   
+            text-decoration: none;  
+            @extend %scale;
+        }
+    }
+}
