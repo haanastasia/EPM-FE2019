@@ -6,39 +6,13 @@ const MAX_RATING = 10; // максимальное кол-во оценок в �
 const MAX_ITEMS = 30; // максимальное кол-во статей в блоге
 const AMOUNT_FEED = 3; // кол-во статей отображаемых в ленте новостей
 
-var requestURL = 'http://my-json-server.typicode.com/haanastasia/EPM-FE2019/posts';
-var request = new XMLHttpRequest();
-request.open('GET', requestURL);
-request.responseType = 'json';
-request.send();
-request.onload = function() {
-    var superHeroes = request.response;
-    populateHeader(superHeroes);
-    showHeroes(superHeroes);
-}
-console.log(superHeroes);
 
 // заполняем массив новостей. 
-function Blog(length) { 
+function Blog(items, length) { 
 
     FillPostsData.call(this);
-    // заполняем массив теги
-    this.topics = ['design', 'seo', 'video', 'css', 'html', 'javascript', 'ecmascript', 'angular',
-        'react', 'nodejs', 'photoshop', 'social', 'programming', 'marketing', 'business', 'humor',
-        'promotion', 'art', 'creative', 'technology', 'style', 'photo', 'animation', 'brand'];
 
-    this.itemBlog = [];
-
-    let i = 1;
-    while (i <= length) {
-        this.itemBlog.push({
-            id: i,
-            rating: Array.from({ length: MAX_RATING }, () => getRand(1001, 0)),
-            topics: rand(this.topics, MAX_TAGS),
-            title: 'Headline ' + i
-        });
-        i++;
-    };
+    this.itemBlog = items;
 
     // сортируем массив по рейтингу по убыванию
     this.itemBlog.sort((a, b) => getAvg(b.rating) - getAvg(a.rating));
@@ -83,9 +57,22 @@ Blog.prototype.render = function(selector, count) {
     }
 };
 
-let news = new Blog(MAX_ITEMS);
-// выводим массив в консоль для тестирования и проверки
-console.log(news.itemBlog);
 
-news.render('.blog__col', AMOUNT_FEED);
-news.render('.blog__col-2', AMOUNT_FEED);
+var xhr = new XMLHttpRequest();
+xhr.open('GET', 'https://my-json-server.typicode.com/haanastasia/EPM-FE2019/posts', true);
+xhr.send(); // (1)
+xhr.onreadystatechange = function() { // (3)
+  if (xhr.readyState != 4) return;
+  if (xhr.status != 200) {
+    console.log(xhr.status + ': ' + xhr.statusText);
+  } else {
+    console.log(xhr.responseText);
+
+    let news = new Blog(xhr.responseText, MAX_ITEMS);
+    // выводим массив в консоль для тестирования и проверки
+    console.log(news.itemBlog);
+
+    news.render('.blog__col', AMOUNT_FEED);
+    news.render('.blog__col-2', AMOUNT_FEED);
+  }
+}
