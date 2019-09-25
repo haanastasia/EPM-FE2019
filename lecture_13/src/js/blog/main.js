@@ -1,14 +1,8 @@
-import { getRand, getAvg, rand } from './helpers'; // вспомогательные функции 
+import { getAvg } from './helpers'; // вспомогательные функции 
 import { FillPostsData } from './fill'; // функция для вывода новостей
-
-const MAX_TAGS = 20; // максимальное кол-во тегов в статье
-const MAX_RATING = 10; // максимальное кол-во оценок в рейтинге
-const MAX_ITEMS = 30; // максимальное кол-во статей в блоге
-const AMOUNT_FEED = 3; // кол-во статей отображаемых в ленте новостей
-
-
+ 
 // заполняем массив новостей. 
-function Blog(items, length) { 
+export function Blog(items) { 
 
     FillPostsData.call(this);
     this.itemBlog = items;
@@ -19,7 +13,7 @@ function Blog(items, length) {
 Blog.prototype = Object.create(FillPostsData.prototype);
 Blog.prototype.constructor = Blog;
 
-Blog.prototype.render = function(selector, count) {
+Blog.prototype.render = function(selector, count = 3) {
     let i = 0;
     let content = document.querySelector(selector); // находим общий контейнер для блога
     while (i < count) {
@@ -53,23 +47,9 @@ Blog.prototype.render = function(selector, count) {
         i++;
     }
 };
+ 
+ 
 
 
-var xhr = new XMLHttpRequest();
-xhr.open('GET', 'https://my-json-server.typicode.com/haanastasia/EPM-FE2019/posts', true);
-xhr.send(); // (1)
-xhr.onreadystatechange = function() { // (3)
-  if (xhr.readyState != 4) return;
-  if (xhr.status != 200) {
-    //console.log(xhr.status + ': ' + xhr.statusText);
-  } else {
-    //console.log(xhr.responseText);
-     
-    let news = new Blog(JSON.parse(xhr.responseText), MAX_ITEMS);
-    // выводим массив в консоль для тестирования и проверки
-    //console.log(news.itemBlog);
+ 
 
-    news.render('.blog__col', AMOUNT_FEED);
-    news.render('.blog__col-2', AMOUNT_FEED);
-  }
-}

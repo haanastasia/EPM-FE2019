@@ -1,18 +1,3 @@
-// функция экранирования символов
-export function escape(string) {
-    let htmlEscapes = {
-        '&': '&amp;',
-        '<': '&lt;',
-        '>': '&gt;',
-        '"': '&quot;',
-        "'": '&#39;'
-    };
-
-    return string.replace(/[&<>"']/g, function (match) {
-        return htmlEscapes[match];
-    });
-}
-
 // функция рандомного числа
 export function getRand(max, min) {
     return Math.floor(Math.random() * max) + min;
