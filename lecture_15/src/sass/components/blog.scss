@@ -1,0 +1,142 @@
+.blog {
+    padding-top: 65px; 
+
+    &__col, &__col-2 {
+        margin-bottom: 88px;
+    }
+    
+    &__item {     
+        max-width: 230px;
+        background: white;
+        position: relative;
+        @extend %slow-animation;  
+
+        &:focus {
+            outline: 1px solid $primary-color;    
+            z-index: 2;
+        }
+
+        &:nth-child(1):focus {
+            transform: scale(1.1) translate(88%,0);
+        }
+
+        &:nth-child(2):focus {
+            transform: scale(1.1) translate(0,0);
+        }
+
+        &:nth-child(3):focus {
+            transform: scale(1.1) translate(-88%,0);
+        }
+    }
+    
+    &__title {
+        font-family: $font-stack;  
+        font-size: 14.5px;
+        font-weight: bold;
+        color: $main-color-family;    
+        margin: 0px auto 10px;
+        text-transform: uppercase;
+    }
+
+    &__preview {
+        max-width: 100%;
+        margin-bottom: 29px;
+        @extend %animation;
+
+        &:hover {
+            filter: brightness(110%);
+        }
+    }
+
+    &__date {
+        font-family: Helvetica;
+        font-size: 13.5px;
+        line-height: 1.74;
+        color: rgba( $main-color-family, .5 );
+        margin-bottom: 15px;
+    }
+
+    &__text {
+        font-family: Helvetica;
+        font-size: 13.5px;
+        line-height: 1.74;
+        color: $main-color-family;    
+        margin: 0px 0 20px;
+    }
+
+    &__btn {
+        background-color: #ececec;
+
+        &:hover {
+            background-color: $primary-color;
+        }
+    }
+
+    &-tags {
+        @include flex(row, wrap, center, center, flex-start);    
+        margin-bottom: 20px;    
+        min-height: 107px;
+        
+        &__item {
+            padding: 0 6px 3px;
+            background: $primary-color-active;
+            color: #fff;
+            border-radius: 10px;
+            margin: 2px 1px;
+            font-size: 10px;
+        }
+    }
+
+}
+
+@media (max-width: $lg)  {
+
+    .blog {
+
+        &__col {
+            margin-bottom: 10px;
+        }
+
+        &__item {       
+            margin-bottom: 30px;
+    
+            &:nth-child(1):focus {
+                transform: none;
+            }
+    
+            &:nth-child(2):focus {
+                transform: none;
+            }
+    
+            &:nth-child(3):focus {
+                transform: none;
+            }
+        }
+    }
+}
+
+@media (max-width: $md)  {
+
+    .blog {
+        padding-top: 40px; 
+
+        &__preview {
+            margin-bottom: 15px;
+        }
+
+        &__title {
+            font-size: 13px;
+            width: 100%;
+            margin: 0 auto 5px;
+        }
+
+        &__date {
+            margin-bottom: 5px;
+        }
+
+        &__text {
+            margin: 0 0 15px;
+            font-size: 12px;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+.slider {
+    position: relative;
+
+    &__controls {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        margin-right: 7px;
+        opacity: 0.5;
+        background-color: #ffffff;
+        cursor: pointer;
+
+        &--active {
+            opacity: 1;
+        }
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    &__dots {
+        bottom: 38px;
+        position: absolute;
+        width: 100%;
+    }
+
+    &-dots__content {
+        @include flex(row, wrap, flex-start, flex-start, flex-start);
+    }
+}
+
+@media (max-width: $sm)  {
+
+    .slider {
+
+        &__dots {
+            bottom: 20px;
+        }
+    }
+}

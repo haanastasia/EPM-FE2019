@@ -1,0 +1,41 @@
+.main {
+    padding-top: 78.4px;
+
+    &__text {
+        font-family: Roboto;
+        font-size: 29.5px;
+        font-weight: 100;
+        color: $main-color-family;    
+    }
+
+    &__advantage {
+        border-bottom: 2px solid rgba(186, 178, 178, 0.5);
+        padding: 71px 0 58px;
+    }
+
+    &__icon {
+        width: 188px;
+        height: 195px;
+
+        img {
+            width: 100%;    
+        }
+    }
+}
+
+@media (max-width: $md)  {
+
+    .main {
+        padding-top: 40px;
+    
+        &__text {
+            font-size: 17.5px;
+            margin-bottom: 20px;  
+        }
+    
+        &__advantage {
+            padding: 20px 0px;
+        }
+    }
+}
+

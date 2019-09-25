@@ -1,0 +1,40 @@
+{
+  "name": "Zippy",
+  "version": "1.0.0",
+  "description": "webpack",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/haanastasia/EPM-FE2019"
+  },
+  "author": "haanastasia <haanastasia@yandex.com>",
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "bootstrap": "^4.0.0",
+    "popper.js": "^1.14.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.6.1",
+    "postcss-loader": "^3.0.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "css-loader": "^0.28.11",
+    "exports-loader": "^0.7.0",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.4.0",
+    "node-sass": "^4.8.2",
+    "rimraf": "^2.6.1",
+    "sass-loader": "^6.0.7",
+    "script-loader": "^0.7.2",
+    "style-loader": "^0.21.0",
+    "uglifyjs-webpack-plugin": "^1.2.7",
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack --watch"
+  }
+}

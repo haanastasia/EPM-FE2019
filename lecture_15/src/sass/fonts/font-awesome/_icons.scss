@@ -1,0 +1,13 @@
+/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+   readers do not read off random characters that represent icons */
+
+.#{$fa-css-prefix}-behance:before { content: $fa-var-behance; }
+.#{$fa-css-prefix}-chevron-left:before { content: $fa-var-chevron-left; }
+.#{$fa-css-prefix}-chevron-right:before { content: $fa-var-chevron-right; }
+.#{$fa-css-prefix}-facebook:before { content: $fa-var-facebook; }
+.#{$fa-css-prefix}-google-plus:before { content: $fa-var-google-plus; }
+.#{$fa-css-prefix}-linkedin:before { content: $fa-var-linkedin; }
+.#{$fa-css-prefix}-twitter:before { content: $fa-var-twitter; }
+.#{$fa-css-prefix}-tumblr:before { content: $fa-var-tumblr; }
+.#{$fa-css-prefix}-bars:before { content: $fa-var-bars; }
+.#{$fa-css-prefix}-times:before { content: $fa-var-times; }
