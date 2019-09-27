@@ -1,4 +1,4 @@
-export function httpGet(url) {
+export function Request(url) {
 
     return new Promise(function(resolve, reject) {
   
