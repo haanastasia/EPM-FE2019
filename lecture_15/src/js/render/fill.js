@@ -1,8 +1,12 @@
 // Для рендеринга
-export function FillPostsData() {
+export default class FillPostsData {
+
+    constructor(selector) {
+        this.content = document.querySelector(selector);
+    }
 
     // создание текстовых элементов
-    this.buildText = function(tag, name, html) {
+    buildText(tag, name, html) {
         this.content = document.createElement(tag);
         this.content.className = name;
         this.content.innerHTML = html;
@@ -10,15 +14,11 @@ export function FillPostsData() {
     }
 
     // создание изображений
-    this.buildImg = function(name, src, alt) {
+    buildImg(name, src, alt) {
         this.content = document.createElement('img');
         this.content.className = name;
         this.content.src = src;
         this.content.alt = alt;
         return this.content;
     }
-}
-
-FillPostsData.prototype.render = function (selector) {
-    this.content = document.querySelector(selector);
 }
