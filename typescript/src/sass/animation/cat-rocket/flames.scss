@@ -1,0 +1,83 @@
+.flames {
+    top: 147px;
+    left: 14px;
+    position: absolute;
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    @for $i from 1 through 4 {
+        $counter: 1*$i;
+
+        li:nth-of-type(#{$i}){
+            animation-delay: #{-$counter}s;
+            animation-duration: #{$counter * .1}s;
+        }
+    }
+
+    li {
+        animation-name: flicker;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+        transform: rotate(-135deg) scale(1.2, 1.2);
+        border-radius: 50% 0;
+        position: absolute;
+        opacity: .8;
+    }
+
+    &--yellow {
+        left: 10px;
+        width: 30px;
+        height: 30px;
+        background: #f5cc00;
+        box-shadow: 0px 0px 9px 4px #f5cc00;
+        top: -40px;
+    }
+
+    &--orange {
+        left: -9px;
+        width: 40px;
+        height: 40px;
+        background: #faa700;
+        box-shadow: 0px 0px 9px 4px #faa700;
+        top: -43px;
+    }
+
+    &--red {
+        left: -10px;
+        width: 50px;
+        height: 50px;
+        background: #ff4000;
+        box-shadow: 0px 0px 5px 4px #ff4000;
+        top: -48px;
+
+        &:after {
+            -webkit-animation: flicker 0.2s infinite ease;
+            animation: flicker 0.2s infinite ease;
+            width: 14px;
+            height: 14px;
+            background: #ff4000;
+            box-shadow: 0px 0px 5px 4px #ff4000;
+            top: 51px;
+            content: "";
+            display: block;
+            border-radius: 50% 0;
+            position: absolute;
+            left: -30px;
+            opacity: 0.2;
+            -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+        }
+    }
+
+    &--white {
+        left: 30px;
+        bottom: 8px;
+        width: 30px;
+        height: 30px;
+        background: white;
+        box-shadow: 0px 0px 9px 4px white;
+    }
+}

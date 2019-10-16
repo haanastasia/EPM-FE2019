@@ -1,0 +1,16 @@
+.footer-list {
+
+    &__item {
+        font-family: Helvetica;
+        font-size: 13.5px;
+        color: $main-color-family;
+        text-decoration: none;
+        margin-bottom: 10px;
+    }
+
+    &__link {
+        @extend .footer-list__item;
+        margin-bottom: 0px;    
+        padding: 10px;
+    }
+}
