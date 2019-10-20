@@ -7,7 +7,7 @@ var clientConfig = (function webpackConfig() {
     const publicPath = 'dist/';
 
     var config = Object.assign({});
-    config.entry = './src/js/app.ts';
+    config.entry = './src/ts/app.ts';
     config.output = {
         path: path.resolve(__dirname, publicPath),
         filename: 'index.js'
