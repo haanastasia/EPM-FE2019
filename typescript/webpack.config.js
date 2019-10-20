@@ -1,6 +1,5 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 
@@ -71,6 +70,10 @@ var clientConfig = (function webpackConfig() {
             template: './src/index.html'
         }),
     ];
+
+    config.resolve = {
+        extensions: [ '.tsx', '.ts', '.js' ],
+    };
 
     return config;
 });
